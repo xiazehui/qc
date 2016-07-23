@@ -113,3 +113,129 @@ table {
   background: url(../images/icon/checkbox2.png) left center no-repeat;
   background-size: 1.4rem 1.2rem;
 }
+/*-------------------------------------------------------------------------------------*/
+a {
+  color: #000;
+}
+.header {
+  background-color: #656ab2;
+}
+.header .title {
+  color: #fff;
+}
+.header .icon {
+  color: #fff;
+  vertical-align: middle;
+  margin-top: -0.1rem;
+  line-height: 2.2rem;
+}
+.section {
+  overflow: hidden;
+}
+.common {
+  overflow: hidden;
+  width: 15rem;
+  margin: .5rem auto;
+}
+.plan {
+  overflow: hidden;
+}
+.plan li {
+  width: 7.45rem;
+  height: 3.5rem;
+  float: left;
+  border-right: .1px solid #cccccc;
+  border-bottom: .1px solid #cccccc;
+}
+.plan li:nth-child(2n+2) {
+  border-right: 0;
+}
+.plan li:nth-last-child(1),
+.plan li:nth-last-child(2) {
+  border-bottom: 0;
+}
+.plan li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.plan li .left {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  margin: .65rem .5rem;
+}
+.plan li .right {
+  width: 2.4rem;
+  line-height: 1rem;
+  float: right;
+  font-size: .6rem;
+  margin: .75rem .8rem;
+}
+.plan li .right.last {
+  margin: 1.25rem .8rem;
+}
+.server-item a {
+  display: block;
+  height: 4.4rem;
+  position: relative;
+}
+.server-item a img {
+  width: 100%;
+  height: 100%;
+}
+.server-item a p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-indent: .5rem;
+  width: 100%;
+  font-size: .6rem;
+}
+.header-pic {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+}
+.list-block a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.list-block .code {
+  font-size: 1rem;
+}
+.tool {
+  text-align: center;
+  width: 4rem;
+  height: 5.5rem;
+  display: block;
+  margin: .8rem auto 0;
+}
+.tool img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.tool span {
+  font-size: .6rem;
+}
+.tool.margin {
+  margin: 2rem auto;
+}
