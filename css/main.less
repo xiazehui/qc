@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*--------------------------------------公共属性------------------------------------*/
+html, body, div, p, dl, dt, dd, ul, ol, li, table, tr, th, td, h1, h2, h3, h4, h5, h6, pre, img, form, fieldset, input, textarea, p, blockquote {margin:0px; padding:0px;border: 0;outline: none;}
+.fl(l){float: left;}//左浮动
+.fl(r){float: right;}//右浮动
+.fl(n){float: none;}//取消浮动
+.fll{float: left;}
+.flr{float: right;}
+.posr{position: relative;}
+.posa{position: absolute;}
+.posf{position: fixed;}
+.pos(r){position: relative;}//相对定位
+.pos(a){position: absolute;}//绝对定位
+.poa(f){position: fixed;}//固定定位
+.ma{margin: 0 auto;}//水平自动居中
+.clearfix{clear: both;}//清除浮动
+.show{display: block !important;}//显示
+.hide{display: none !important;}//隐藏
+.paddnone{padding: 0;}//内边距清除
+.bornone{border: none;}//无边框
+.txt(c){text-align: center;}/*文字水平居中*/
+.txt(l){text-align: left;}/*文字水平居左*/
+.txt(r){text-align: right;}/*文字水平居右*/
+.onetxt{text-overflow:ellipsis;white-space:nowrap;overflow:hidden; }//文字只显示一行
+li{ list-style: none; }
+a{ text-decoration: none; cursor: pointer;}
+i{	font-style: normal;}
+em{	font-style: normal;}
+.img{width: 100%;height: 100%;}
+h1, h2, h3, h4, h5, h6{ font-weight: normal;}
+table{ border-spacing: 0;}
+.checkbox{
+	width: 1.4rem;
+	height: 1.2rem;
+	display: block;
+	background: url(../images/icon/checkbox1.png) left center no-repeat;
+	background-size: 1.4rem 1.2rem;
+	&.active{
+		background: url(../images/icon/checkbox2.png) left center no-repeat;
+		background-size: 1.4rem 1.2rem;
+	}
+}
