@@ -34,7 +34,20 @@
         </nav>
         <div class="content">
             <!-- 这里是页面内容区 -->
-            <section class="section">
+            <section class="section white-bg">
+                <div class="common">
+                    <div class="swiper-container" data-space-between='10'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i4/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>                    
+                </div>
+            </section>
+            <div style="height: .5rem;"></div>
+            <section class="section white-bg">
                 <div class="common">
                     <ul class="plan">
                         <li>
@@ -72,7 +85,8 @@
                     </ul>
                 </div>
             </section>
-            <section class="section">
+            <div style="height: .5rem;"></div>
+            <section class="section white-bg">
                 <div class="common">
                     <div class="content-padded grid-demo">
                         <div class="row server-item">
@@ -95,5 +109,10 @@
 <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/sm-extend.min.js' charset='utf-8'></script>
+<script type="text/javascript">
+$(function() {
+    $(".swiper-container").swiper();
+});    
+</script>
 </body>
 </html>

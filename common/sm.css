@@ -1807,6 +1807,7 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   color: #3d4145;
   font-size: 0.85rem;
   font-family: inherit;
+  text-align: right;
 }
 .list-block input[type="date"],
 .list-block input[type="datetime-local"] {
@@ -2396,8 +2397,8 @@ input[type="button"].button {
   border-radius: 0;
 }
 .buttons-tab .button.active {
-  color: #0894ec;
-  border-color: #0894ec;
+  color: #7cd14f;
+  border-color: #7cd14f;
   z-index: 100;
 }
 .buttons-fixed {

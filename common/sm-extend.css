@@ -361,7 +361,7 @@ body > .photo-browser .toolbar {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  padding-bottom: 30px;
+  height: 7.5rem;
   /* Fix of Webkit flickering */
   z-index: 1;
 }
@@ -475,16 +475,16 @@ body > .photo-browser .toolbar {
   opacity: 0;
 }
 .swiper-pagination-bullet {
-  width: .4rem;
-  height: .4rem;
+  width: .6rem;
+  height: .6rem;
   display: inline-block;
   border-radius: 100%;
   background: #000;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #007aff;
+  background: #7cd14f;
 }
 .swiper-container-vertical > .swiper-pagination {
   right: .5rem;
@@ -497,12 +497,14 @@ body > .photo-browser .toolbar {
   display: block;
 }
 .swiper-container-horizontal > .swiper-pagination {
-  bottom: .5rem;
+  bottom: 0;
   left: 0;
   width: 100%;
+  text-align: right;
+  background-color: rgba(0,0,0,.3);
 }
 .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
-  margin: 0 .25rem;
+  margin: 0 .4rem;
 }
 /* 3D Container */
 .swiper-container-3d {
