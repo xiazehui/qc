@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>题目1</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="common/sm.css">
+    <link rel="stylesheet" href="common/sm-extend.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current" id="subject1">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left" href="javascript:;" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第1题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject2" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div style="height: 3rem;"></div>
+            <p class="center-zt">当前测试孩子的性别是？</p>
+		  	<div class="content-padded grid-demo">
+			    <div class="row no-gutter">
+			    	<div class="col-100 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      		<span>男孩</span>
+				      	</a>			    		
+			    	</div>
+			    	<div class="col-100 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      		<span>女孩</span>
+				      	</a>			    		
+			    	</div>
+			    </div>
+		  	</div>            
+        </div>
+    </div>
+    <div class="page" id="subject2">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject1" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第2题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject3" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+            	<p class="small-zt center-zt">请你正确填写孩子的信息，以保证测试结果准确</p>  
+				<div class="list-block from">
+	            	<ul>
+	            		<li class="item-content">
+	            			<a href="javascript:;">
+		            			<div class="item-inner">
+		            				<div class="item-title label">生日</div>
+		            				<div class="item-input">
+						              	<input type="text" data-toggle='date' id="birthday" />
+						            </div>
+		            			</div>
+	            			</a>
+	            		</li>
+	            		<li class="item-content">
+	            			<a href="javascript:;">
+		            			<div class="item-inner">
+		            				<div class="item-title label">身高</div>
+		            				<div class="item-input">
+						              	<input type="text" placeholder="厘米">
+						            </div>
+		            			</div>
+	            			</a>
+	            		</li>
+	            		<li class="item-content">
+	            			<a href="javascript:;">
+		            			<div class="item-inner">
+		            				<div class="item-title label">体重</div>
+		            				<div class="item-input">
+						              	<input type="text" placeholder="斤">
+						            </div>
+		            			</div>
+	            			</a>
+	            		</li>
+	            	</ul>
+	            </div> 	         	 
+            </div>   
+            <div class="becareful hide">
+            	满18周岁眼球基本成型，不需要进行测试哦
+            </div>
+            <div class="becareful">
+            	满3周岁才能预测到高度近视风险哦
+            </div>    
+        </div>
+    </div>
+    <div class="page" id="subject3">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject2" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第3题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject4" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+				<div class="list-block from">
+	            	<ul>
+	            		<li class="item-content">
+	            			<a href="javascript:;">
+		            			<div class="item-inner">
+		            				<div class="item-title label">姓名</div>
+		            				<div class="item-input">
+						              	<input type="date">
+						            </div>
+		            			</div>
+	            			</a>
+	            		</li>
+	            		<li class="item-content">
+	            			<a href="javascript:;">
+		            			<div class="item-inner">
+		            				<div class="item-title label">身高</div>
+		            				<div class="item-input">
+						              	<input type="text" placeholder="厘米">
+						            </div>
+		            			</div>
+	            			</a>
+	            		</li>
+	            		<li class="item-content">
+	            			<a href="javascript:;">
+		            			<div class="item-inner">
+		            				<div class="item-title label">体重</div>
+		            				<div class="item-input">
+						              	<input type="text" placeholder="斤">
+						            </div>
+		            			</div>
+	            			</a>
+	            		</li>
+	            	</ul>
+	            </div>         	 
+            </div>      
+        </div>
+    </div>
+    <div class="page" id="subject4">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject3" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第4题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject5" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	<span class="green-zt">#视疲劳测试#</span>轻轻闭上双眼，观察孩子眼睫毛的抖动情况。
+	            	<img src="images/pic/s1.png" alt="">
+	            </div>
+	            <a href="javascript:;" class="btn">不抖动</a>    
+	            <a href="javascript:;" class="btn">轻微抖动</a>    
+	            <a href="javascript:;" class="btn">快速抖动</a>            	 
+            </div>      
+        </div>
+    </div>  
+    <div class="page" id="subject5">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject4" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第5题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject6" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	<span class="green-zt">#眼压测试#</span>眼球自然向下看，用食指在孩子上眼脸位置按压眼球，触感如何？
+	            	<img src="images/pic/s1.png" alt="">
+	            </div>
+	            <a href="javascript:;" class="btn">介于嘴唇与鼻尖</a>    
+	            <a href="javascript:;" class="btn">介于笔尖与额头</a>    
+	            <a href="javascript:;" class="btn">介于额头与石头</a> 
+	            <a href="javascript:;" class="btn">如石头</a>           	 
+            </div>      
+        </div>
+    </div>  
+    <div class="page" id="subject6">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject5" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第6题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject7" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	标准的读写姿势是做到“一尺一拳一寸”，即眼睛与书本距离一尺，身前与书桌距离一拳，握笔手指与笔尖距离一寸。您孩子的日常的读写姿势能否坚持做到“一尺一拳一寸”？
+	            	<img src="images/pic/s1.png" alt="">
+	            </div>
+	            <a href="javascript:;" class="btn">能继续保持</a>    
+	            <a href="javascript:;" class="btn">偶尔保持</a>    
+	            <a href="javascript:;" class="btn">基本做不到</a>          	 
+            </div>      
+        </div>
+    </div>
+    <div class="page" id="subject7">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject6" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第7题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject8" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子的握笔方式最接近与下图所示的哪一种？
+	            </div>  
+			    <div class="row no-gutter">
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>			    	
+			    </div>                    	 
+            </div>      
+        </div>
+    </div>  
+    <div class="page" id="subject8">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject7" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第7题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject9" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子的握笔方式最接近与下图所示的哪一种？
+	            </div>  
+			    <div class="row no-gutter">
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>
+			    	<div class="col-50 tool">
+				      	<a href="javascript:;">
+				      		<img src="" alt="">
+				      	</a>			    		
+			    	</div>			    	
+			    </div> 	                   	 
+            </div>      
+        </div>
+    </div>  
+    <div class="page" id="subject9">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject8" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第9题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject10" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子在看书（手机等）是存在一下哪种情况？<span class="red-zt">（可多选）</span>
+	            </div>    
+	            <a href="javascript:;" class="btn">趴着看</a>   
+	            <a href="javascript:;" class="btn">灯光黑暗或闪烁情况下看</a>     
+	            <a href="javascript:;" class="btn">太阳光下看</a>     
+	            <a href="javascript:;" class="btn">边吃饭边看</a>     
+	            <a href="javascript:;" class="btn">以上都没有</a>                     	 
+            </div>      
+        </div>
+    </div>  
+    <div class="page" id="subject10">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject9" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第10题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject11" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子的每天户外运动平均多少？
+	            </div>    
+	            <a href="javascript:;" class="btn">30分钟以内</a>   
+	            <a href="javascript:;" class="btn">30~60分钟</a>     
+	            <a href="javascript:;" class="btn">60~90分钟</a>     
+	            <a href="javascript:;" class="btn">90分钟以上</a>                        	 
+            </div>      
+        </div>
+    </div> 
+    <div class="page" id="subject11">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject10" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第11题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject12" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子是否破腹产？
+	            </div>    
+	            <a href="javascript:;" class="btn">是</a>   
+	            <a href="javascript:;" class="btn">否</a>                             	 
+            </div>      
+        </div>
+    </div>  
+    <div class="page" id="subject12">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject11" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第12题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject13" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子每次玩电脑、玩手机的时间一般多少？
+                    <img src="images/pic/s1.png" alt="">
+	            </div>    
+	            <a href="javascript:;" class="btn">少于半小时</a>   
+	            <a href="javascript:;" class="btn">半小时到一小时</a>     
+	            <a href="javascript:;" class="btn">一小时到两小时</a>     
+	            <a href="javascript:;" class="btn">两小时以上</a>                         	 
+            </div>      
+        </div>
+    </div>
+    <div class="page" id="subject13">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject12" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第13题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject14" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	天气晴好的周末，您的孩子经常去：
+	            </div>    
+	            <a href="javascript:;" class="btn">书店、图书馆</a>   
+	            <a href="javascript:;" class="btn">和小伙伴去户外玩耍</a>     
+	            <a href="javascript:;" class="btn">兴趣班</a>     
+	            <a href="javascript:;" class="btn">宅在家里</a>                         	 
+            </div>      
+        </div>
+    </div>
+    <div class="page" id="subject14">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject13" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第14题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject15" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子看东西是否存在着一下行为？<span class="red-zt">（可多选）</span>
+	            </div>    
+	            <a href="javascript:;" class="btn">眯眼</a>   
+	            <a href="javascript:;" class="btn">歪头</a>     
+	            <a href="javascript:;" class="btn">侧视</a>     
+	            <a href="javascript:;" class="btn">皱眉</a> 
+                <a href="javascript:;" class="btn">频眨眼、猛眨眼</a> 
+                <a href="javascript:;" class="btn">以上都没有</a>                        	 
+            </div>      
+        </div>
+    </div>
+    <div class="page" id="subject15">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject14" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第15题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject16" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+                <div class="guide">
+                    孩子是否有晨读习惯？
+                </div>    
+                <a href="javascript:;" class="btn">是</a>   
+                <a href="javascript:;" class="btn">否</a>                                       	 
+            </div>      
+        </div>
+    </div> 
+    <div class="page" id="subject16">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject15" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第16题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="#subject17" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+	            	孩子平时是否喜欢揉眼睛？
+                    <img src="images/pic/s1.png" alt="">
+	            </div>    
+	            <a href="javascript:;" class="btn">没有见过</a>   
+	            <a href="javascript:;" class="btn">偶尔有</a>          
+	            <a href="javascript:;" class="btn">经常</a>                        	 
+            </div>      
+        </div>
+    </div>   
+    <div class="page" id="subject17">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="#subject16" data-transition='slide-out'>
+		      	<span class="icon icon-left"></span>
+				第17题
+		    </a>
+		    <a class="button button-link button-nav pull-right" href="javascript:;" data-transition='slide-out'>
+				下一题
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="common">
+        		<div class="guide">
+                    在没有人提现的状态下，看书、写作业连续时间是否经常超过45分钟？
+                </div>    
+                <a href="javascript:;" class="btn">是</a>   
+                <a href="javascript:;" class="btn">否</a>                     
+            </div>      
+        </div>
+    </div>                        
+</div>
+<script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/subject.js"></script>
+</body>
+</html>

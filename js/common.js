@@ -1,20 +1,3 @@
-$(function(){
-	if($(".back_btn")){
-		$(".back_btn").on("click",function(){
-			history.go(-1);
-		});
-	}
-});
-$(function(){
-	var btn = $(".navbar_btn");
-	var menu_view = $(".header_menu_box");
-	btn.on("click",function(){
-		$(menu_view).animate({width:"100%"},300);
-	});
-	menu_view.on("click",function(){
-		$(menu_view).animate({width:"0"},300);
-	});
-});
 function btnXZ(btns){
 	btns.on("click",function(){
 		$(this).addClass("active").siblings().removeClass("active");

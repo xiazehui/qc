@@ -255,24 +255,24 @@ a {
 .list-block .code {
   font-size: 1rem;
 }
-.tool {
+.tool a {
   text-align: center;
   width: 4rem;
   height: 5.5rem;
   display: block;
   margin: .8rem auto 0;
 }
-.tool img {
+.tool a img {
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
 }
-.tool span {
+.tool a span {
   font-size: .6rem;
 }
-.tool.margin {
+.tool a.margin {
   margin: 2rem auto;
 }
 .tool.active img {
