@@ -1488,7 +1488,7 @@ a:active {
   top: auto;
   height: 1px;
   width: 100%;
-  background-color: #e7e7e7;
+  background-color: #ccc;
   display: block;
   z-index: 15;
   -webkit-transform-origin: 50% 100%;
@@ -3359,6 +3359,7 @@ html.with-statusbar-overlay .popup.tablet-fullscreen {
 }
 .card-content {
   position: relative;
+  color: #7c7c7c;
 }
 .card-content-inner {
   padding: 0.75rem;
@@ -3376,9 +3377,9 @@ html.with-statusbar-overlay .popup.tablet-fullscreen {
 }
 .card-header,
 .card-footer {
-  min-height: 2.2rem;
+  min-height: 1.6rem;
   position: relative;
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3460,7 +3461,8 @@ html:not(.watch-active-state) .card-footer a.link:active,
 }
 .card-header {
   border-radius: 0.1rem 0.1rem 0 0;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
+  color: #b2b4b1;
 }
 .card-header:after {
   content: '';
