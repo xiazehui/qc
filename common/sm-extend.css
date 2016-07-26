@@ -413,6 +413,10 @@ body > .photo-browser .toolbar {
   height: 100%;
   position: relative;
 }
+.swiper-slide img{
+  display: block;
+  width: 100%;
+}
 /* a11y */
 .swiper-container .swiper-notification {
   position: absolute;
