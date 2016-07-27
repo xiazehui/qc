@@ -104,5 +104,20 @@
 
 <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='common/touch.js' charset='utf-8'></script>
+<script type="text/javascript">
+$('.content').on("swipeleft", function(){
+    alert("向左滑动");
+})  
+$('.content').on("swiperight", function(){
+    alert("向右滑动");
+})  
+$('.content').on("swipeup", function(){
+    alert("向上滑动");
+})  
+$('.content').on("swipedown", function(){
+    alert("向下滑动");
+})  
+</script>
 </body>
 </html>
