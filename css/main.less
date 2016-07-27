@@ -80,7 +80,11 @@ a{
 .content-img{
 	width: 100%;
 	display: block;
-	margin: 1rem 0;
+	margin: 1rem auto;
+	&.img-6{
+		width: 6rem;
+		margin: 0 auto;
+	}
 }
 .center-zt{
 	text-align: center;
@@ -93,6 +97,9 @@ a{
 }
 .border-bottom{
 	border-bottom: 1px solid #ccc;
+}
+.border{
+	border: 1px solid #ccc;
 }
 .white-bg{
 	background-color: #fff;
@@ -165,6 +172,7 @@ a{
 	width: 2.7rem;
 	height: 2.7rem;
 	border-radius: 50%;
+	border: 2px solid #fff;
 }
 .list-block{
 	a{
@@ -211,6 +219,16 @@ a{
 			border: 1px solid #7cd14f;
 		}
 	}
+	&.big{
+		a{
+			width: 6rem;
+			height: 8.25rem;
+			img{
+				width: 6rem;
+				height: 6rem;
+			}
+		}
+	}
 }
 .guide{
 	width: 15rem;
@@ -219,6 +237,7 @@ a{
 	font-size: .6rem;
 	background-color: #fff;
 	border-radius: .7rem;
+	min-height: 5rem;
 	img{
 		width: 10rem;
 		display: block;
@@ -229,7 +248,7 @@ a{
 	display: block;
 	width: 13rem;
 	height: 1.6rem;
-	font-size: .7rem;
+	font-size: .6rem;
 	text-align: center;
 	line-height: 1.6rem;
 	border-radius: .7rem;
