@@ -1809,6 +1809,9 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   font-family: inherit;
   text-align: right;
 }
+// .list-block input[type="text"].ng-invalid{
+//   background-color: #f00;
+// }
 .list-block input[type="date"],
 .list-block input[type="datetime-local"] {
   line-height: 2.2rem;

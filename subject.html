@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>题目1</title>
+    <title>题目</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="common/sm.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/window.js"></script>
+    <script type="text/javascript" src="common/angular.js"></script>
 </head>
 <body>
-<div class="page-group">
-    <div class="page page-current" id="subject1">
+<div class="page-group" ng-app="app">
+    <div class="page page-current" id="subject1" ng-controller="subject1">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left" href="javascript:;" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第1题
 		    </a>
-		    <a class="button button-link button-nav pull-right" href="#subject2" data-transition='slide-out'>
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next1()">
 				下一题
 		    </a>
         </header>
@@ -31,13 +32,13 @@
 		  	<div class="content-padded grid-demo">
 			    <div class="row no-gutter">
 			    	<div class="col-100 tool big">
-				      	<a href="javascript:;">
+				      	<a href="javascript:;" ng-click="sex='男孩'">
 				      		<img src="images/pic/sex1.png" alt="男孩">
 				      		<span>男孩</span>
 				      	</a>			    		
 			    	</div>
 			    	<div class="col-100 tool big">
-				      	<a href="javascript:;">
+				      	<a href="javascript:;" ng-click="sex='女孩'">
 				      		<img src="images/pic/sex2.png" alt="女孩">
 				      		<span>女孩</span>
 				      	</a>			    		
@@ -46,13 +47,13 @@
 		  	</div>            
         </div>
     </div>
-    <div class="page" id="subject2">
+    <div class="page" id="subject2" ng-controller="subject2">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject1" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第2题
 		    </a>
-		    <a class="button button-link button-nav pull-right" href="#subject3" data-transition='slide-out'>
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next2()">
 				下一题
 		    </a>
         </header>
@@ -62,19 +63,11 @@
             	<p class="small-zt center-zt">请你正确填写孩子的信息，以保证测试结果准确</p>  
 				<div class="list-block from">
 	            	<ul>
-	            		<!-- <li class="item-content">
-	            			<div class="item-inner">
-	            				<div class="item-title label">性别</div>
-	            				<div class="item-input">
-					              	<input type="text" id='sex-picker'/>
-					            </div>
-	            			</div>
-	            		</li> -->
 	            		<li class="item-content">
 	            			<div class="item-inner">
 	            				<div class="item-title label">生日</div>
 	            				<div class="item-input">
-					              	<input type="text" data-toggle='date' id="birthday" />
+					              	<input type="text" data-toggle='date' id="birthday" name="birthday" ng-model="birthday" required/>
 					            </div>
 	            			</div>
 	            		</li>
@@ -82,7 +75,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">身高</div>
 	            				<div class="item-input">
-					              	<input type="text" placeholder="厘米">
+					              	<input type="number" placeholder="厘米" name="height" ng-model="height" required>
 					            </div>
 	            			</div>
 	            		</li>
@@ -90,7 +83,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">体重</div>
 	            				<div class="item-input">
-					              	<input type="text" placeholder="斤">
+					              	<input type="number" placeholder="斤" name="weight" ng-model="weight" required>
 					            </div>
 	            			</div>
 	            		</li>
@@ -102,16 +95,16 @@
             </div>
             <div class="becareful">
             	满3周岁才能预测到高度近视风险哦
-            </div>    
+            </div>                	
         </div>
     </div>
-    <div class="page" id="subject3">
+    <div class="page" id="subject3" ng-controller="subject3">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject2" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第3题
 		    </a>
-		    <a class="button button-link button-nav pull-right" href="#subject4" data-transition='slide-out'>
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next3()">
 				下一题
 		    </a>
         </header>
@@ -124,7 +117,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">父亲度数</div>
 	            				<div class="item-input">
-					              	<input type="text" placeholder="度">
+					              	<input type="text" placeholder="度" name="father" ng-model="father">
 					            </div>
 	            			</div>
 	            		</li>
@@ -132,7 +125,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">母亲度数</div>
 	            				<div class="item-input">
-					              	<input type="text" placeholder="度">
+					              	<input type="text" placeholder="度" name="mother" ng-model="mother">
 					            </div>
 	            			</div>
 	            		</li>
@@ -485,23 +478,5 @@
 <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/subject.js"></script>
-<script type="text/javascript" charset='utf-8'>
-	$("#birthday").calendar({
-	    value: ['2016-01-01']
-	});
-	// $("#sex-picker").picker({
-	//   toolbarTemplate: '<header class="bar bar-nav">\
-	//   <button class="button button-link pull-left">按钮</button>\
-	//   <button class="button button-link pull-right close-picker">确定</button>\
-	//   <h1 class="title">标题</h1>\
-	//   </header>',
-	//   cols: [
-	//     {
-	//       textAlign: 'center',
-	//       values: ['男孩', '女孩']
-	//     }
-	//   ]
-	// });
-</script>
 </body>
 </html>
