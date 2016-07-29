@@ -27,9 +27,9 @@
 		            <div class="guide">
 		            	<span class="green-zt">#远视力测试#</span>家长手持手机，让孩子距离屏幕<span class="red-zt">2.5米</span>，点击“开始”后，按照屏幕提示操作，先测右眼，再测左眼。
 		            </div>
-		            <h1 class="green-zt center-zt">测试右眼</h1>
-		            <h2 class="center-zt">请遮住左眼</h2>
-		            <img src="images/pic/test.png" alt="测试" class="content-img">   
+		            <h2 class="green-zt center-zt">测试右眼</h2>
+		            <h3 class="center-zt">请遮住左眼</h3>
+		            <img src="images/pic/test.png" alt="测试" class="content-img img-13">   
 		            <a href="#test2" class="btn green">开始</a>               		
             	</div>
             </section>    
@@ -46,15 +46,16 @@
             <!-- 这里是页面内容区 -->
             <section class="section">
                 <div class="remind">
-                    滑动屏幕判断现标E的缺口方向
+                    测试1元硬币的大小
                 </div>
                 <div class="common">
-                    <p class="center-zt">正在测试右眼</p>  
-                    <p class="center-zt green-zt">4.2/0.15</p>
-                    <div style="height: 1rem;"></div>
-                    <img src="images/pic/vision-52.png" alt="测试" class="content-img E" data-direction="右">  
-                    <div style="height: 1rem;"></div>  
-                    <p class="center-zt"><span>正确：<em class="green-zt" id="num-correct">0</em></span>&nbsp;&nbsp;&nbsp;&nbsp;<span>错误：<em class="red-zt" id="num-error">0</em></span></p>                   
+                    <div style="height: 2rem;"></div>                   
+                    <img src="images/pic/1.jpg" alt="1元" id="one" class="one-10">  
+                    <div style="height: 2rem;"></div>   
+                    <div class="row img-9">
+                      <div class="col-50"><a href="#" class="button button-fill button-danger" id="sx">缩小</a></div>
+                      <div class="col-50"><a href="#" class="button button-fill button-success" id="fd">放大</a></div>
+                    </div>                     
                 </div>
                 <a class="btn green confirm-ok">确定</a>
             </section>    
@@ -71,20 +72,43 @@
             <!-- 这里是页面内容区 -->
             <section class="section">
                 <div class="remind">
-                    视力现状评估
+                    滑动屏幕判断现标E的缺口方向
                 </div>
                 <div class="common">
-                    <img src="images/pic/t3.png" alt="测试" class="content-img">  
-                    <a href="archives.html" class="btn green">存入视力档案</a> 
-                    <a href="#test2" class="btn green-white back">重新测试</a> 
-                    <a href="#test4" class="btn orange">继续评估近视风险</a>  
+                    <p class="center-zt">正在测试右眼</p>  
+                    <p class="center-zt green-zt">5.2/1.5</p>                    
+                    <img src="images/pic/vision-52.png" alt="测试" class="E" data-direction="右">                 
+                    <p class="center-zt"><span>正确：<em class="green-zt" id="num-correct">0</em></span>&nbsp;&nbsp;&nbsp;&nbsp;<span>错误：<em class="red-zt" id="num-error">0</em></span></p>                   
                 </div>
+                <a class="btn green confirm-ok">结束测试</a>
             </section>    
         </div>
     </div>
     <div class="page" id="test4">
         <header class="bar bar-nav header">
-            <a class="button button-link button-nav pull-left back" href="#test3" data-transition='slide-out'>
+            <a class="button button-link button-nav pull-left back" href="#test2" data-transition='slide-out'>
+              <span class="icon icon-left"></span>
+              测视力
+            </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <section class="section">
+                <div class="remind">
+                    视力现状评估
+                </div>
+                <div class="common">
+                    <img src="images/pic/t3.png" alt="测试" class="content-img">  
+                    <a href="archives.html" class="btn green">存入视力档案</a> 
+                    <a href="#test3" class="btn green-white back">重新测试</a> 
+                    <a href="#test5" class="btn orange">继续评估近视风险</a>  
+                </div>
+            </section>    
+        </div>
+    </div>
+    <div class="page" id="test5">
+        <header class="bar bar-nav header">
+            <a class="button button-link button-nav pull-left back" href="#test4" data-transition='slide-out'>
               <span class="icon icon-left"></span>
             </a>
         </header>

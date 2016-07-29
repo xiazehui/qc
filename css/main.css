@@ -144,6 +144,53 @@ a {
   width: 15rem;
   margin: .5rem auto;
 }
+.common img {
+  display: block;
+  margin: 0 auto;
+}
+.one-10 {
+  width: 5rem;
+}
+.one-11 {
+  width: 5.5rem;
+}
+.one-12 {
+  width: 6rem;
+}
+.one-13 {
+  width: 6.5rem;
+}
+.one-14 {
+  width: 7rem;
+}
+.one-15 {
+  width: 7.5rem;
+}
+.one-16 {
+  width: 8rem;
+}
+.one-17 {
+  width: 8.5rem;
+}
+.one-18 {
+  width: 9rem;
+}
+.one-19 {
+  width: 9.5rem;
+}
+.img-6 {
+  width: 6rem;
+}
+.img-9 {
+  width: 9rem;
+  margin: 0 auto;
+}
+.img-12 {
+  width: 12rem;
+}
+.img-13 {
+  width: 13rem;
+}
 .green-zt {
   color: #7bd04e;
 }
@@ -154,10 +201,6 @@ a {
   width: 100%;
   display: block;
   margin: 1rem auto;
-}
-.content-img.img-6 {
-  width: 6rem;
-  margin: 0 auto;
 }
 .center-zt {
   text-align: center;

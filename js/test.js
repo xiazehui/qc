@@ -1,4 +1,18 @@
 $(function(){
+	var img = $("#one");
+	var num = 10;
+	var fd = $("#fd");
+	var sx = $("#sx");
+	fd.on("click", function(){
+		num ++;
+		$(img).addClass("one-"+ num +"").removeClass("one-"+ (num-1) +"");
+	});
+	sx.on("click", function(){
+		num --;
+		$(img).addClass("one-"+ num +"").removeClass("one-"+ (num+1) +"");
+	});
+});
+$(function(){
 	var num = 52;
 	var content = $('#test2 .content');
 	var img = $(content).find(".E");
@@ -51,7 +65,7 @@ $(function(){
 $(function(){
 	$(document).on('click','.confirm-ok', function () {
 	    $.confirm('视力测试完成了吗', function () {
-	        $.router.load("#test3");
+	        $.router.load("#test4");
 	    });
 	}); 	
 });
