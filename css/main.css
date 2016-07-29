@@ -138,45 +138,74 @@ a {
 }
 .section {
   overflow: hidden;
+  width: 100%;
 }
 .common {
   overflow: hidden;
   width: 15rem;
   margin: .5rem auto;
+  position: relative;
 }
 .common img {
   display: block;
   margin: 0 auto;
 }
+.one-1 {
+  width: 100px;
+}
+.one-2 {
+  width: 20px;
+}
+.one-3 {
+  width: 30px;
+}
+.one-4 {
+  width: 40px;
+}
+.one-5 {
+  width: 50px;
+}
+.one-6 {
+  width: 60px;
+}
+.one-7 {
+  width: 70px;
+}
+.one-8 {
+  width: 80px;
+}
+.one-9 {
+  width: 90px;
+}
 .one-10 {
-  width: 5rem;
+  width: 100px;
 }
 .one-11 {
-  width: 5.5rem;
+  width: 110px;
 }
 .one-12 {
-  width: 6rem;
+  width: 120px;
 }
 .one-13 {
-  width: 6.5rem;
+  width: 130px;
 }
 .one-14 {
-  width: 7rem;
+  width: 140px;
 }
 .one-15 {
-  width: 7.5rem;
+  width: 150px;
 }
 .one-16 {
-  width: 8rem;
+  width: 160px;
 }
 .one-17 {
-  width: 8.5rem;
+  width: 170px;
 }
 .one-18 {
-  width: 9rem;
+  width: 180px;
 }
 .one-19 {
-  width: 9.5rem;
+  width: 190px;
 }
 .img-6 {
   width: 6rem;
@@ -225,6 +254,11 @@ a {
 }
 .spuer-small-zt {
   font-size: .6rem !important;
+}
+.bottom-pos {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
 }
 .plan {
   overflow: hidden;
