@@ -49,13 +49,14 @@
                     滑动屏幕判断现标E的缺口方向
                 </div>
                 <div class="common">
-                    <div style="height: 2.5rem;"></div>
-                    <img src="images/pic/t2.png" alt="测试" class="content-img">  
-                    <div style="height: 2.5rem;"></div>         
                     <p class="center-zt">正在测试右眼</p>  
-                    <p class="center-zt green-zt">4.2/0.15</p>          
+                    <p class="center-zt green-zt">4.2/0.15</p>
+                    <div style="height: 1rem;"></div>
+                    <img src="images/pic/vision-52.png" alt="测试" class="content-img E" data-direction="右">  
+                    <div style="height: 1rem;"></div>  
+                    <p class="center-zt"><span>正确：<em class="green-zt" id="num-correct">0</em></span>&nbsp;&nbsp;&nbsp;&nbsp;<span>错误：<em class="red-zt" id="num-error">0</em></span></p>                   
                 </div>
-                <a href="#test3" class="btn green">确定</a>
+                <a class="btn green confirm-ok">确定</a>
             </section>    
         </div>
     </div>
@@ -101,23 +102,9 @@
         </div>
     </div>            
 </div>
-
 <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/touch.js' charset='utf-8'></script>
-<script type="text/javascript">
-$('.content').on("swipeleft", function(){
-    alert("向左滑动");
-})  
-$('.content').on("swiperight", function(){
-    alert("向右滑动");
-})  
-$('.content').on("swipeup", function(){
-    alert("向上滑动");
-})  
-$('.content').on("swipedown", function(){
-    alert("向下滑动");
-})  
-</script>
+<script type='text/javascript' src='js/test.js' charset='utf-8'></script>
 </body>
 </html>
