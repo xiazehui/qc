@@ -52,12 +52,14 @@
                     <div style="height: 2rem;"></div>                   
                     <img src="images/pic/1.jpg" alt="1元" id="one" class="one-10">  
                     <div style="height: 2rem;"></div>   
+                </div>
+                <div class="common bottom-pos">
                     <div class="row img-9">
                       <div class="col-50"><a href="#" class="button button-fill button-danger" id="sx">缩小</a></div>
                       <div class="col-50"><a href="#" class="button button-fill button-success" id="fd">放大</a></div>
-                    </div>                     
+                    </div> 
+                    <a class="btn green confirm-ok">确定</a>                   
                 </div>
-                <a class="btn green confirm-ok">确定</a>
             </section>    
         </div>
     </div>
@@ -76,21 +78,47 @@
                 </div>
                 <div class="common">
                     <p class="center-zt">正在测试右眼</p>  
-                    <p class="center-zt green-zt">4.7/0.5</p>                     
+                    <p class="center-zt green-zt"><span class="vision">4.7</span>/<span class="vision-x">0.5</span></p>                     
                 </div>   
                 <div class="common">               
-                    <img src="images/pic/vision-52.png" alt="测试" class="E" data-direction="3">                                
+                    <img src="images/pic/vision-52.png" alt="视力表" class="E" data-direction="3">                                
                 </div>
                 <div class="section bottom-pos">
-                    <p class="center-zt"><span>正确：<em class="green-zt" id="num-correct">0</em></span>&nbsp;&nbsp;&nbsp;&nbsp;<span>错误：<em class="red-zt" id="num-error">0</em></span></p>  
-                    <a class="btn green confirm-ok">结束测试</a>
+                    <p class="center-zt"><span>正确：<em class="green-zt num-correct">0</em></span>&nbsp;&nbsp;&nbsp;&nbsp;<span>错误：<em class="red-zt num-error">0</em></span></p>  
                 </div>
             </section>    
         </div>
     </div>
     <div class="page" id="test4">
         <header class="bar bar-nav header">
-            <a class="button button-link button-nav pull-left back" href="#test2" data-transition='slide-out'>
+            <a class="button button-link button-nav pull-left back" href="#test3" data-transition='slide-out'>
+              <span class="icon icon-left"></span>
+              测视力
+            </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <section class="section">
+                <div class="remind">
+                    滑动屏幕判断现标E的缺口方向
+                </div>
+                <div class="common">
+                    <p class="center-zt">正在测试左眼</p>  
+                    <p class="center-zt green-zt"><span class="vision">4.7</span>/<span class="vision-x">0.5</span></p>                     
+                </div>   
+                <div class="common">               
+                    <img src="images/pic/vision-52.png" alt="视力表" class="E" data-direction="3">                                
+                </div>
+                <div class="section bottom-pos">
+                    <p class="center-zt"><span>正确：<em class="green-zt num-correct">0</em></span>&nbsp;&nbsp;&nbsp;&nbsp;<span>错误：<em class="red-zt num-error">0</em></span></p>  
+                    <a class="btn green confirm-ok">结束测试</a>
+                </div>
+            </section>    
+        </div>
+    </div>
+    <div class="page" id="test5">
+        <header class="bar bar-nav header">
+            <a class="button button-link button-nav pull-left back" href="#test4" data-transition='slide-out'>
               <span class="icon icon-left"></span>
               测视力
             </a>
@@ -101,18 +129,39 @@
                 <div class="remind">
                     视力现状评估
                 </div>
-                <div class="common">
-                    <img src="images/pic/t3.png" alt="测试" class="content-img">  
+                <div class="common padding-1">
+                    <div class="row center-zt" id="eye-info">
+                        <div class="col-50 gray-bg radius-5 padding-1">
+                            <p>左眼</p>
+                            <p class="orange-zt"><span>4.7</span>/<span>0.5</span></p>
+                        </div> 
+                        <div class="col-50 gray-bg radius-5 padding-1">
+                            <p>右眼</p>
+                            <p class="orange-zt"><span>4.7</span>/<span>0.5</span></p>
+                        </div>                         
+                    </div>
                     <a href="archives.html" class="btn green">存入视力档案</a> 
                     <a href="#test3" class="btn green-white back">重新测试</a> 
-                    <a href="#test5" class="btn orange">继续评估近视风险</a>  
+                    <a href="#test6" class="btn orange">继续评估近视风险</a>  
                 </div>
+                <section class="bottom-pos section">
+                    <div class="common center-zt">
+                        <div class="pos-relative padding-05"><span id="left-eye" class="pos-absolute width-25 spuer-small-zt">左眼<i></i></span></div>
+                        <div class="row no-gutter">
+                            <div class="col-25 padding-05 green-bg"></div>
+                            <div class="col-25 padding-05 yellow-bg"></div>
+                            <div class="col-25 padding-05 orange-bg"></div>
+                            <div class="col-25 padding-05 red-bg"></div>
+                        </div> 
+                        <div class="pos-relative padding-05"><span id="right-eye" class="pos-absolute width-25 spuer-small-zt">右眼<i></i></span></div>                   
+                    </div>                    
+                </section>
             </section>    
         </div>
     </div>
-    <div class="page" id="test5">
+    <div class="page" id="test6">
         <header class="bar bar-nav header">
-            <a class="button button-link button-nav pull-left back" href="#test4" data-transition='slide-out'>
+            <a class="button button-link button-nav pull-left back" href="#test5" data-transition='slide-out'>
               <span class="icon icon-left"></span>
             </a>
         </header>
