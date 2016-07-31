@@ -220,18 +220,24 @@ a {
   display: block;
   margin: 0 auto;
 }
-.img-6 {
+.common .img-6 {
   width: 6rem;
 }
-.img-9 {
+.common .img-9 {
   width: 9rem;
   margin: 0 auto;
 }
-.img-12 {
+.common .img-12 {
   width: 12rem;
 }
-.img-13 {
+.common .img-13 {
   width: 13rem;
+}
+.common .img-14 {
+  width: 14rem;
+}
+.swiper-slide img {
+  width: 100%;
 }
 .green-zt {
   color: #7bd04e;
@@ -298,6 +304,13 @@ a {
 .width-25 {
   width: 25%;
   display: block;
+}
+.pos-top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .left-pos-0 {
   left: 0%;

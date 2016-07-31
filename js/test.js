@@ -29,7 +29,7 @@ $(function(){
 			num ++;
 			$(img).addClass("one-"+ num +"").removeClass("one-"+ (num-1) +"");
 		}else{
-			$.alert('以达到最大了');
+			$.alert('已达到最大了');
 		}
 	});
 	sx.on("click", function(){		
@@ -37,7 +37,7 @@ $(function(){
 			num --;
 			$(img).addClass("one-"+ num +"").removeClass("one-"+ (num+1) +"");
 		}else{
-			$.alert('以达到最小了');
+			$.alert('已达到最小了');
 		}
 	});
 	var btn = $("#test1 .confirm-ok");
@@ -87,54 +87,9 @@ function estimate(){
 	$(info[1]).html(left_eye[1]);
 	$(info[2]).html(right_eye[0]);
 	$(info[3]).html(right_eye[1]);
-	var leftEye = $("#left-eye");
-	var rightEye = $("#right-eye");
-	switch(parseFloat(left_eye[0])){
-		case 5.2:
-		case 5.1:
-		case 5.0:
-			$(leftEye).addClass("left-pos-0");
-			break;
-		case 4.9:
-		case 4.8:			
-		case 4.7:
-			$(leftEye).addClass("left-pos-25");
-			break;
-		case 4.6:
-		case 4.5:
-		case 4.4:
-			$(leftEye).addClass("left-pos-50");
-			break;
-		case 4.3:
-		case 4.2:
-		case 4.1:
-		case 4.0:
-			$(leftEye).addClass("left-pos-75");
-			break;
-	}
-	switch(parseFloat(right_eye[0])){
-		case 5.2:
-		case 5.1:
-		case 5.0:
-			$(rightEye).addClass("left-pos-0");
-			break;
-		case 4.9:
-		case 4.8:			
-		case 4.7:
-			$(rightEye).addClass("left-pos-25");
-			break;
-		case 4.6:
-		case 4.5:
-		case 4.4:
-			$(rightEye).addClass("left-pos-50");
-			break;
-		case 4.3:
-		case 4.2:
-		case 4.1:
-		case 4.0:
-			$(rightEye).addClass("left-pos-75");
-			break;
-	}
+	circle(parseFloat(left_eye[0]), parseFloat(right_eye[0]));
+	$("#svg1").find("text").html(left_eye[0]+"/"+left_eye[1]);
+	$("#svg2").find("text").html(right_eye[0]+"/"+right_eye[1]);
 }
 $(function(){
 	test($("#test4 .content"), 4);
@@ -220,5 +175,5 @@ function test(content, id){
 	    }else{
 	        correct();
 	    }
-	}); 	
+	}); 
 }

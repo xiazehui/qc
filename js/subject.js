@@ -356,10 +356,9 @@ app.controller('subject17', function($scope) {
         if (num === 0) {
         	alert("请选择选项");
         }else{
-        	alert("题目测试完成");
         	$.showPreloader();
         	console.log(person);
-        	var img = $(".content-img");
+        	var img = $("#subject18 .guide");
         	if (person.score >= 0 && person.score <= 45) {
         		$(img[0]).removeClass("hide");
         	}else if (person.score >= 46 && person.score <= 65) {

@@ -27,24 +27,22 @@
         </header>
         <div class="content">
             <!-- 这里是页面内容区 -->
-            <div style="height: 3rem;"></div>
+            <div style="height: 2rem;"></div>
             <p class="center-zt">当前测试孩子的性别是？</p>
-		  	<div class="content-padded grid-demo">
-			    <div class="row no-gutter">
-			    	<div class="col-100 tool big">
-				      	<a href="javascript:;" ng-click="sex='男孩'">
-				      		<img src="images/pic/sex1.png" alt="男孩">
-				      		<span>男孩</span>
-				      	</a>			    		
-			    	</div>
-			    	<div class="col-100 tool big">
-				      	<a href="javascript:;" ng-click="sex='女孩'">
-				      		<img src="images/pic/sex2.png" alt="女孩">
-				      		<span>女孩</span>
-				      	</a>			    		
-			    	</div>
-			    </div>
-		  	</div>            
+		    <div class="row no-gutter">
+		    	<div class="col-100 tool big">
+			      	<a href="javascript:;" ng-click="sex='男孩'">
+			      		<img src="images/pic/sex1.png" alt="男孩">
+			      		<span>男孩</span>
+			      	</a>			    		
+		    	</div>
+		    	<div class="col-100 tool big">
+			      	<a href="javascript:;" ng-click="sex='女孩'">
+			      		<img src="images/pic/sex2.png" alt="女孩">
+			      		<span>女孩</span>
+			      	</a>			    		
+		    	</div>
+		    </div>           
         </div>
     </div>
     <div class="page" id="subject2" ng-controller="subject2">
@@ -455,10 +453,18 @@
                     高度近视风险评估报告
                 </div>
                 <div class="common">
-                	<img src="" alt="良好" class="content-img hide" minscore="0" maxscore="45">
-                	<img src="" alt="可能性比较大" class="content-img hide" minscore="46" maxscore="65">
-                    <img src="" alt="可能性非常大" class="content-img hide" minscore="66" maxscore="85">
-                    <img src="images/pic/archives.png" alt="非常大的隐患" class="content-img hide" minscore="86" maxscore="100">
+                	<div class="guide hide" minscore="0" maxscore="45">
+	                    良好
+	                </div>
+	                <div class="guide hide" minscore="46" maxscore="65">
+	                    可能性比较大
+	                </div>
+	                <div class="guide hide" minscore="66" maxscore="85">
+	                    可能性非常大
+	                </div>
+	                <div class="guide hide" minscore="86" maxscore="100">
+	                    非常大的隐患
+	                </div>
                 </div>
             </section>  
             <div class="section bottom-pos">
