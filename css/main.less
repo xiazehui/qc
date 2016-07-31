@@ -49,6 +49,16 @@ table{ border-spacing: 0;}
   }
   .generate-columns(@n, (@i + 1));
 }
+.table{
+	display:table; 
+	text-align:center; 
+	width: 100%;
+	height: 15rem;
+	span{
+		display:table-cell; 
+		vertical-align:middle; 
+	}
+}
 a{
 	color: #000;
 }
@@ -357,6 +367,9 @@ a{
 		border: 1px solid #7cd14f;
 		color: #7cd14f;
 		background-color: #fff;
+	}
+	&.btn-block{
+		width: 100%;
 	}
 }
 .remind{
