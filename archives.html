@@ -31,8 +31,9 @@
 				<div class="tabs">
 			      	<div id="tab1" class="tab active">
 				        <div class="common">
-				        	<img src="images/pic/t5.png" alt="测试" class="content-img img-6">  
-				          	<p class="center-zt">还没有视力数据，你可以选择</p>
+				        	<!-- <img src="images/pic/t5.png" alt="测试" class="content-img img-6">  
+				          	<p class="center-zt">还没有视力数据，你可以选择</p> -->
+				          	<div id="container" style="width: 100%;height: 15rem;"></div>
 				          	<a href="javascript:;" class="btn green">测视力</a>      
 				        </div>
 			      	</div>
@@ -47,8 +48,64 @@
         </div>
     </div>
 </div>
-
 <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="common/echarts.min.js"></script>
+<script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    title: {
+        text: '视力变化曲线图',
+    },
+    legend: {
+        data:['左眼','右眼'],
+        right: "10%"
+    },
+    xAxis:  {
+        type: 'category',
+        boundaryGap: false,
+        data: ['周一','周二','周三','周四','周五','周六','周日']
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value} '
+        },
+        splitNumber: 12,
+        min: 4,
+        max: 5
+    },
+    series: [
+        {
+            name:'左眼',
+            type:'line',
+            data:[4.1, 4.2, 4.7, 4.4, 4.5, 4.6, 4.5],
+            markPoint: {
+                data: [
+                    {type: 'max', name: '最大值'},
+                    {type: 'min', name: '最小值'}
+                ]
+            },
+        },
+        {
+           	name:'右眼',
+            type:'line',
+            data:[4.0, 4.1, 4.6, 4.3, 4.4, 4.5, 4.4],
+            markPoint: {
+                data: [
+                    {name: '周最低', value: +1, xAxis: 1, yAxis: -1.5}
+                ]
+            },
+        }
+    ]
+};
+
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}	
+</script>
 </body>
 </html>

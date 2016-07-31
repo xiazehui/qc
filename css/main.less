@@ -45,7 +45,7 @@ table{ border-spacing: 0;}
 
 .generate-columns(@n, @i: 1) when (@i =< @n) {
   .one-@{i} {
-    width: (@i * 200px / @n + 3);
+    width: (@i * 100px / @n + 53);
   }
   .generate-columns(@n, (@i + 1));
 }

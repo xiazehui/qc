@@ -115,64 +115,64 @@ table {
 }
 /*-------------------------------------------------------------------------------------*/
 .one-1 {
-  width: 13px;
+  width: 58px;
 }
 .one-2 {
-  width: 23px;
-}
-.one-3 {
-  width: 33px;
-}
-.one-4 {
-  width: 43px;
-}
-.one-5 {
-  width: 53px;
-}
-.one-6 {
   width: 63px;
 }
-.one-7 {
+.one-3 {
+  width: 68px;
+}
+.one-4 {
   width: 73px;
 }
-.one-8 {
+.one-5 {
+  width: 78px;
+}
+.one-6 {
   width: 83px;
 }
-.one-9 {
+.one-7 {
+  width: 88px;
+}
+.one-8 {
   width: 93px;
+}
+.one-9 {
+  width: 98px;
 }
 .one-10 {
   width: 103px;
 }
 .one-11 {
-  width: 113px;
+  width: 108px;
 }
 .one-12 {
-  width: 123px;
+  width: 113px;
 }
 .one-13 {
-  width: 133px;
+  width: 118px;
 }
 .one-14 {
-  width: 143px;
+  width: 123px;
 }
 .one-15 {
-  width: 153px;
+  width: 128px;
 }
 .one-16 {
-  width: 163px;
+  width: 133px;
 }
 .one-17 {
-  width: 173px;
+  width: 138px;
 }
 .one-18 {
-  width: 183px;
+  width: 143px;
 }
 .one-19 {
-  width: 193px;
+  width: 148px;
 }
 .one-20 {
-  width: 203px;
+  width: 153px;
 }
 .table {
   display: table;
