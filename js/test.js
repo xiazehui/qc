@@ -25,12 +25,20 @@ $(function(){
 	var fd = $("#fd");
 	var sx = $("#sx");
 	fd.on("click", function(){
-		num ++;
-		$(img).addClass("one-"+ num +"").removeClass("one-"+ (num-1) +"");
+		if (num < 20) {
+			num ++;
+			$(img).addClass("one-"+ num +"").removeClass("one-"+ (num-1) +"");
+		}else{
+			$.alert('以达到最大了');
+		}
 	});
-	sx.on("click", function(){
-		num --;
-		$(img).addClass("one-"+ num +"").removeClass("one-"+ (num+1) +"");
+	sx.on("click", function(){		
+		if (num > 5) {
+			num --;
+			$(img).addClass("one-"+ num +"").removeClass("one-"+ (num+1) +"");
+		}else{
+			$.alert('以达到最小了');
+		}
 	});
 	var btn = $("#test1 .confirm-ok");
 	btn.on("click", function(){
@@ -176,6 +184,7 @@ function test(content, id){
         		left_eye.push($(content).find(".vision").html());
         		left_eye.push($(content).find(".vision-x").html());
         		$.router.load("#test3");
+        		correct_num = 0;
         	}else{
         		right_eye.push($(content).find(".vision").html());
         		right_eye.push($(content).find(".vision-x").html());

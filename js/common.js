@@ -3,6 +3,19 @@ function btnXZ(btns){
 		$(this).addClass("active").siblings().removeClass("active");
 	});
 }
+function unBtnXZ(btns){
+	$(btns).unbind("click");
+	console.log(btns);
+}
+function btnMoreXZ(btns){
+	btns.on("click", function(){
+		if (!$(this).hasClass("active")) {
+			$(this).addClass("active");
+		}else{
+			$(this).removeClass("active")
+		}
+	});
+}
 function btnView(btns, views){
 	btns.on("click",function(){
 		for (var i = 0; i < btns.length; i++) {

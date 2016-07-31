@@ -103,15 +103,16 @@
             </section>
         </div>
     </div>
+    <!-- 将script放在page-group  否则在别的页面跳转来时  js有时候会没执行 -->
+    <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='common/sm-extend.min.js' charset='utf-8'></script>
+    <script type="text/javascript">
+    $(function() {
+        $.init();
+        $(".swiper-container").swiper();
+    });    
+    </script>
 </div>
-
-<script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='common/sm-extend.min.js' charset='utf-8'></script>
-<script type="text/javascript">
-$(function() {
-    $(".swiper-container").swiper();
-});    
-</script>
 </body>
 </html>
