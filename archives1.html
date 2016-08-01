@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>档案</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="common/sm.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/window.js"></script>
+</head>
+<body>
+<div class="page-group">
+    <div class="page page-current">
+        <header class="bar bar-nav header">
+        	<a class="button button-link button-nav pull-left back" href="index.html" data-transition='slide-out'>
+		      <span class="icon icon-left"></span>
+		      时光&屈光度档案
+		    </a>
+        </header>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <section class="section">
+                <div class="buttons-tab">
+                    <a href="#tab1" class="tab-link active button">裸眼视力</a>
+                    <a href="#tab2" class="tab-link button">屈光度</a>
+                </div>
+                <div class="tabs">
+                    <div id="tab1" class="tab active">
+                        <div class="common">
+                            <div class="shili">
+                                <img src="images/pic/t5.png" alt="测试" class="content-img img-6">  
+                                <p class="center-zt">还没有视力数据，你可以选择</p>                                
+                            </div>
+                            <div id="container" style="width: 100%;height: 15rem;"></div>
+                            <a href="javascript:;" class="btn green">测视力</a>      
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab">
+                        <div class="common">
+                            <img src="images/pic/t6.png" alt="测试" class="content-img img-6">  
+                            <p class="indent-zt">还没有屈光度数据，我们会有专门的人员去您所在的学校采集屈光度数据，敬请期待</p>
+                        </div>
+                    </div>                      
+                </div>
+            </section>   
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+
+
+    <script type="text/javascript">
+
+//    这三个是全局的变量稍后要扩展  写在公共区域，全部页面可以使用， 以后要修改这三个参数
+        var url = "http://nick.vicp.io/";
+        var userID = 2;
+        var studentId = 1;
+
+        $(function () {
+            //文档加载完成
+
+            //这里弹出加载数据等待框
+
+
+            //  这里请求获取屈光度列表
+            $.ajax({
+                type: "POST", // 要求是Post      Method：	POST
+                url: url + "vision/getDiopterList", //这里请求获取屈光度列表 要求是Post
+                data: { tudentId: studentId }, //这里是提交的参数 如果有其他参数自己获取 studentId	int	是	用户标识
+                dataType: "json", //这里不用管 这是返回的格式， json 就好
+                success: function (data) {
+                    ///这里是成功返回的
+                    //{"data":[{"leftDiopter":120,"rightDiopter":150,"studentId":208,"submitTime":1469502438488,"diopterId":1},{"leftDiopter":150,"rightDiopter":180,"studentId":208,"submitTime":1469502600392,"diopterId":2}],"state":"获取成功","code":1}
+                    //上面返回的是数据
+                    if (data.code == 1) {
+                        //代表正常返回数据
+                        //这里隐藏加载登录框
+                        if (data.length > 0) {
+
+                            //隐藏没有数据 显示图表容器
+                            //js 创建图表
+
+                        } else {
+
+                            //隐藏图表容器
+                            //显示没有数据容器
+                        }
+
+                    } else {
+                        console.log(data.state); //这里可以看到为啥不正确
+                    }
+                },
+                error: function () {
+                    alert("系统异常稍后再试...")
+                }
+            });
+
+        })
+    
+    </script>
+</body>
+</html>
