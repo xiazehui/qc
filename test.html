@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <link rel="stylesheet" href="common/sm.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/lanren.css">
@@ -16,28 +15,26 @@
 <body>
 <div class="page-group">
     <div class="page page-current" id="test1">
+        <img src="images/pic/yb.gif" alt="1元" id="one" class="one-10" style="display:none">
         <header class="bar bar-nav header">
             <a class="button button-link button-nav pull-left back" href="index.html" data-transition='slide-out'>
               <span class="icon icon-left"></span>
               测视力
             </a>
         </header>
+    
         <div class="content">
             <!-- 这里是页面内容区 -->
             <section class="section">
                 <div class="remind">
-                    测试1元硬币的大小
-                </div>
-                <div class="common">
-                    <div style="height: 4rem;"></div>                   
-                    <img src="images/pic/1.png" alt="1元" id="one" class="one-10">  
-                    <div style="height: 4rem;"></div>   
+                    请将调整1元硬币和您的真实硬币一样大小
                 </div>
                 <div class="section bottom-pos">
                     <div class="common">
-                        <div class="row img-9">
-                          <div class="col-50"><a href="#" class="button button-fill button-danger" id="sx">缩小</a></div>
-                          <div class="col-50"><a href="#" class="button button-fill button-success" id="fd">放大</a></div>
+                        <div class="row img-9" style="width:13rem">
+                          <div class="col-50" style="margin-left:0;"><input type="button" name="name" value="缩小" class="btn button-fill button-danger" id="sx" style="width:100%; "/></div>
+                          <div class="col-50" style="margin-left:8%;"><input type="button" name="name" value="放大" class="btn button-fill button-success" id="fd" style="width:100%; " />
+                            </div>
                         </div> 
                         <a class="btn green confirm-ok">确定</a>                          
                     </div>               
@@ -104,7 +101,7 @@
                 <div class="remind">
                     滑动屏幕判断现标E的缺口方向
                 </div>              
-                <div class="table"><span><img src="images/pic/vision-52.png" alt="视力表" class="E" data-direction="3"></span></div>  
+                <div class="table"><span><img src="images/pic/vision-52.gif" alt="视力表" class="E" style="display:none"   /></span></div>  
                 <div class="common pos-bottom">
                     <p class="center-zt">正在测试左眼</p>  
                     <p class="center-zt green-zt"><span class="vision">4.7</span>/<span class="vision-x">0.5</span></p>                     
@@ -125,7 +122,7 @@
                 <div class="remind">
                     滑动屏幕判断现标E的缺口方向
                 </div>                
-                <div class="table"><span><img src="images/pic/vision-52.png" alt="视力表" class="E" data-direction="3"></span></div>   
+                <div class="table"><span><img src="images/pic/vision-52.gif" alt="视力表" class="E" style="display:none" /></span></div>   
                 <div class="common pos-bottom">
                     <p class="center-zt">正在测试右眼</p>  
                     <p class="center-zt green-zt"><span class="vision">4.7</span>/<span class="vision-x">0.5</span></p>                     
@@ -154,40 +151,41 @@
                                 <svg  id="svg1" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                     <defs id="mydefs">
                                         <linearGradient id="lightGreenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" stop-color="#8DD64F" stop-opacity="1"></stop>
-                                            <stop offset="100%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
+                                            <stop offset="0%" stop-color="#FA413E" stop-opacity="1"></stop>
+                                            <stop offset="100%" stop-color="#F49415" stop-opacity="0.5"></stop>
                                         </linearGradient>
                                         <linearGradient id="greenDeepGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
+                                            <stop offset="0%" stop-color="#F49415" stop-opacity="0.5"></stop>
                                             <stop offset="100%" stop-color="#FAF652" stop-opacity="1"></stop>
                                         </linearGradient>
                                         <linearGradient id="greenLightRedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="#FAF652" stop-opacity="1"></stop>
-                                            <stop offset="100%" stop-color="#F49415" stop-opacity="0.5"></stop>
+                                            <stop offset="100%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
                                         </linearGradient>
                                         <linearGradient id="LightRedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#F49415" stop-opacity="0.5"></stop>
-                                            <stop offset="100%" stop-color="#FA413E" stop-opacity="1"></stop>
+                                            <stop offset="0%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
+                                            <stop offset="100%" stop-color="#8DD64F" stop-opacity="1"></stop>
                                         </linearGradient>
                                     </defs>
                                 </svg>
+
                                 <svg  id="svg2" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                     <defs id="mydefs">
                                         <linearGradient id="lightGreenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" stop-color="#8DD64F" stop-opacity="1"></stop>
-                                            <stop offset="100%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
+                                            <stop offset="0%" stop-color="#FA413E" stop-opacity="1"></stop>
+                                            <stop offset="100%" stop-color="#F49415" stop-opacity="0.5"></stop>
                                         </linearGradient>
                                         <linearGradient id="greenDeepGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
+                                            <stop offset="0%" stop-color="#F49415" stop-opacity="0.5"></stop>
                                             <stop offset="100%" stop-color="#FAF652" stop-opacity="1"></stop>
                                         </linearGradient>
                                         <linearGradient id="greenLightRedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="#FAF652" stop-opacity="1"></stop>
-                                            <stop offset="100%" stop-color="#F49415" stop-opacity="0.5"></stop>
+                                            <stop offset="100%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
                                         </linearGradient>
                                         <linearGradient id="LightRedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#F49415" stop-opacity="0.5"></stop>
-                                            <stop offset="100%" stop-color="#FA413E" stop-opacity="1"></stop>
+                                            <stop offset="0%" stop-color="#8DD64F" stop-opacity="0.5"></stop>
+                                            <stop offset="100%" stop-color="#8DD64F" stop-opacity="1"></stop>
                                         </linearGradient>
                                     </defs>
                                 </svg>
@@ -198,9 +196,9 @@
                     </div>  
                 </div>
                 <section class="bottom-pos section">
-                    <a href="archives.html" class="btn green">存入视力档案</a> 
+                    <a id="save_archives"  class="btn green">存入视力档案</a> 
                     <a href="#test2" class="btn green-white">重新测试</a> 
-                    <a href="subject.html" class="btn orange">继续评估近视风险</a>
+                    <a href="subject.html" class="btn orange" external>继续评估近视风险</a>
                 </section>
             </section>    
         </div>
@@ -210,178 +208,7 @@
 <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/touch.js' charset='utf-8'></script>
 <script>
-function circle(left, right){
-    var value1=100 - left/5.2*100; //1-100; 值
-    var value2=100 - right/5.2*100; //1-100; 值
-    var speed=1/30*Math.PI;
-    var Q1=((Math.PI*2)/360*value1*3.6)+0.001;
-    var Q2=((Math.PI*2)/360*value2*3.6)+0.001;
-    var time=20;
-    createQuaCircle("svg1");
-    doAnimation(Q1,"svg1",speed,time);
-    showText("svg1","左眼","18");
 
-    createQuaCircle("svg2");
-    doAnimation(Q2,"svg2",speed,time);
-    showText("svg2","右眼","18");
-    //创建1/4半圆
-}
-function doAnimation(Q,id,speed,time){
-      var oSvg=document.getElementById(id);
-      var oSvgWidth=parseInt((oSvg.curentStyle?oSvg.curentStyle:window.getComputedStyle(oSvg,null)).width);
-      oSvg.setAttribute("height",oSvgWidth);
-      //创建use元素的组合
-      var bgCircleG=document.createElementNS("http://www.w3.org/2000/svg","g");
-      bgCircleG.setAttribute("transform","translate("+0.5*oSvgWidth+","+0.5*oSvgWidth+")");
-      createGradientBg(bgCircleG,oSvg,oSvgWidth);
-      var currentAngle=0;
-      var rotateRirection;  //旋转的方向如果Q<=Math.PI rotateRirection 为1 大的弧度，如果Q>Math.PI rotateRirection为0 小的弧度
-      if (Q<=0) {
-        //大圆
-        var smallCircle=document.createElementNS("http://www.w3.org/2000/svg","circle");
-        smallCircle.setAttribute("cx",0);
-        smallCircle.setAttribute("cy",0);
-        smallCircle.setAttribute("r",0.5*oSvgWidth+1);
-        smallCircle.setAttribute("fill","#e5e5e5");
-        bgCircleG.appendChild(smallCircle);
-        //小圆
-        drawSmallCircle(id,bgCircleG,oSvgWidth);
-      }
-      else if (Q>0&&Q<=2*Math.PI) {
-        rotateRirection=judgeRirection(currentAngle);
-        currentAngle+=speed;
-        var tId=null;
-        annimationCircle(id,bgCircleG,currentAngle,oSvgWidth,rotateRirection);
-        tId=setInterval(function(){
-                if (currentAngle<=Q) {
-                    rotateRirection=judgeRirection(currentAngle);
-                    annimationCircle(id,bgCircleG,currentAngle,oSvgWidth,rotateRirection);
-                    currentAngle+=speed;
-                    if (currentAngle>=Q) {
-                        currentAngle=Q;
-                        if (Q>Math.PI) {
-                        rotateRirection=judgeRirection(currentAngle);
-                        }
-                        annimationCircle(id,bgCircleG,currentAngle,oSvgWidth,rotateRirection);
-                        clearTimeout(tId);
-
-                    };
-                }
-                else {
-                    currentAngle=Q;
-                    rotateRirection=judgeRirection(currentAngle);
-                    annimationCircle(id,bgCircleG,currentAngle,oSvgWidth,rotateRirection);
-                    clearTimeout(tId);
-
-            }
-        },time);
-      }
-      else if(Q>2*Math.PI){
-        drawSmallCircle(id,bgCircleG,oSvgWidth);
-      }
-
-}
-
-function createQuaCircle(id){
-        var oSvg=document.getElementById(id);
-        var oSvgWidth=parseInt((oSvg.curentStyle?oSvg.curentStyle:window.getComputedStyle(oSvg,null)).width);
-        var cr1=cr2=0.5*oSvgWidth;
-        var oPathElement=document.createElementNS("http://www.w3.org/2000/svg","path");
-        var d="M0,0"+" L 0,"+-0.5*oSvgWidth+" A"+0.5*oSvgWidth+","+0.5*oSvgWidth+" 0 0,1 "+0.5*oSvgWidth+",0 z";
-        oPathElement.id="halfCircle";
-        oPathElement.setAttribute("d",d);
-        var omydefs=document.getElementById("mydefs");
-        omydefs.appendChild(oPathElement);
-}
-
-function createGradientBg(bgCircleG,oSvg){
-
-        //创建第一个use元素
-        var bgCircle1=document.createElementNS("http://www.w3.org/2000/svg","use");
-        bgCircle1.setAttribute("fill","url(#lightGreenGradient)");
-        bgCircle1.setAttributeNS("http://www.w3.org/1999/xlink","xlink:href","#halfCircle");
-        //创建第2个use元素并且旋转90度
-        var bgCircle2=document.createElementNS("http://www.w3.org/2000/svg","use");
-        bgCircle2.setAttributeNS("http://www.w3.org/1999/xlink","xlink:href","#halfCircle");
-        bgCircle2.setAttribute("fill","url(#greenDeepGradient)");
-        bgCircle2.setAttribute("transform","rotate(90)");
-        //创建第3个use元素并且旋转180度
-        var bgCircle3=document.createElementNS("http://www.w3.org/2000/svg","use");
-        bgCircle3.setAttributeNS("http://www.w3.org/1999/xlink","xlink:href","#halfCircle");
-        bgCircle3.setAttribute("fill","url(#greenLightRedGradient)");
-        bgCircle3.setAttribute("transform","rotate(180)");
-        //创建第4个use元素并且旋转270度
-        var bgCircle4=document.createElementNS("http://www.w3.org/2000/svg","use");
-        bgCircle4.setAttributeNS("http://www.w3.org/1999/xlink","xlink:href","#halfCircle");
-        bgCircle4.setAttribute("fill","url(#LightRedGradient)");
-        bgCircle4.setAttribute("transform","rotate(270)");
-        //将use元素追加到组合中
-        bgCircleG.appendChild(bgCircle1);
-        bgCircleG.appendChild(bgCircle2);
-        bgCircleG.appendChild(bgCircle3);
-        bgCircleG.appendChild(bgCircle4);
-        oSvg.appendChild(bgCircleG);
-        }
-      //动态圆遮挡边用灰色填充
-function annimationCircle(id,bgCircleG,Q,oSvgWidth,rotateRirection){
-        if (oPathElement2=document.getElementById("half"+id)) {
-            bgCircleG.removeChild(oPathElement2);
-        };
-        var oPathElement2=document.createElementNS("http://www.w3.org/2000/svg","path");
-        var d="M0,0"+" L"+(0.5*oSvgWidth)*Math.sin(Q)+","+(-(0.5*oSvgWidth)*Math.cos(Q))+" A"+(0.5*oSvgWidth)+","+(0.5*oSvgWidth)+" 0 "+rotateRirection+",1 "+"0 "+(-0.5*oSvgWidth)+" z";
-        oPathElement2.id="half"+id;
-        oPathElement2.setAttribute("d",d);
-        oPathElement2.setAttribute("stroke","#e5e5e5");
-        oPathElement2.setAttribute("fill","#e5e5e5");
-        bgCircleG.appendChild(oPathElement2);
-        drawSmallCircle(id,bgCircleG,oSvgWidth);
-  }
-    // 圆弧中比较小的圆用白色填充
-function drawSmallCircle(id,bgCircleG,oSvgWidth){
-        if (smallCircle2=document.getElementById("smallCircle"+id)) {
-            bgCircleG.removeChild(smallCircle2);
-        };
-        var smallCircle=document.createElementNS("http://www.w3.org/2000/svg","circle");
-        smallCircle.id="smallCircle"+id;
-        smallCircle.setAttribute("cx",0);
-        smallCircle.setAttribute("cy",0);
-        smallCircle.setAttribute("r",0.4*oSvgWidth+1);
-        smallCircle.setAttribute("stroke","#FFF");
-        smallCircle.setAttribute("stroke-width","4");
-        smallCircle.setAttribute("fill","#FFF");
-        bgCircleG.appendChild(smallCircle);
-}
-  //rotateRirection 旋转的方向如果<=Math.PI rotateRirection 为1 大的弧度，如果>Math.PI rotateRirection为0 小的弧度
-function judgeRirection(angle){
-        if (angle<=Math.PI) {
-                rotateRirection=1;
-        }
-        else {
-                rotateRirection=0;
-        }
-        return rotateRirection;
-}
-function showText(id,value,fontSize){
-    var oSvg=document.getElementById(id);
-    var oSvgWidth=parseInt((oSvg.curentStyle?oSvg.curentStyle:window.getComputedStyle(oSvg,null)).width);
-    if (oSvgWidth<480) {
-        fontSize=0.8*parseInt(fontSize);
-    };
-    var otext=document.createElementNS("http://www.w3.org/2000/svg","text");
-    var oTspan=document.createElementNS("http://www.w3.org/2000/svg","tspan");
-    otext.setAttribute("x",parseInt(0.5*oSvgWidth));
-    otext.setAttribute("y",parseInt(0.5*oSvgWidth));
-    otext.setAttribute("font-size",fontSize);
-    otext.setAttribute("z-index",99999);
-    otext.setAttribute("font-weight","500");
-    otext.setAttribute("font-family","微软雅黑");
-    otext.setAttribute("text-anchor","middle");
-    otext.setAttribute("dominant-baseline","middle");
-    otext.setAttribute("fill","#38c19d");
-    var oTextCon=document.createTextNode(value);
-    otext.appendChild(oTextCon);
-    oSvg.appendChild(otext);
-}
 </script>
 <script type='text/javascript' src='js/test.js' charset='utf-8'></script>
 </body>

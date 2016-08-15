@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /*--------------------------------------公共属性------------------------------------*/
 html,
 body,
@@ -189,9 +189,13 @@ a {
 }
 .header {
   background-color: #656ab2;
+  width:100%;
 }
 .header .title {
   color: #fff;
+  
+  padding:0 2rem;
+  display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
 .header .icon {
   color: #fff;
@@ -246,7 +250,7 @@ a {
   color: #fe2828;
 }
 .content-img {
-  width: 100%;
+  width: 60%%;
   display: block;
   margin: 1rem auto;
 }
@@ -370,14 +374,15 @@ a {
   margin: .65rem .5rem;
 }
 .plan li .right {
-  width: 2.4rem;
+  width: 2.6rem;
   line-height: 1rem;
   float: right;
   font-size: .6rem;
-  margin: .75rem .8rem;
+  margin: .75rem 1.0rem .75rem .6rem;
+  
 }
 .plan li .right.last {
-  margin: 1.25rem .8rem;
+  margin: 1.25rem 1.0rem 1.25rem .8rem;
 }
 .server-item a {
   display: block;
@@ -554,8 +559,21 @@ a {
   font-size: .6rem;
   background-color: #fff;
   border-radius: .7rem;
-  min-height: 6rem;
+  text-indent:2rem;
+  position:relative;
 }
+
+#question img {
+    position: absolute;
+    width: 1.4rem;
+    top:0.4rem;
+}
+#answer img{
+    position: absolute;
+    width: 1.4rem;
+    top:0.4rem;
+}
+
 .user-info {
   width: 100%;
   text-align: center;
@@ -572,3 +590,35 @@ a {
 .user-info .common {
   margin: 2rem auto;
 }
+
+
+
+.hyfa {padding:0.5rem;}
+.hyfa li{ background-repeat:no-repeat; background-size:5rem; width:5rem; height:5rem; margin:1rem; float:left; text-align:center; vertical-align:middle; overflow:hidden; font-size:0.8rem;}
+.hyfa li:nth-child(5n+1) {background-image: url("../images/pic/1.gif"); }
+.hyfa li:nth-child(5n+2) {background-image:url("../images/pic/2.gif");    }
+.hyfa li:nth-child(5n+3) {background-image:url("../images/pic/3.gif");    }
+.hyfa li:nth-child(5n+4) {background-image:url("../images/pic/4.gif");    }
+.hyfa li:nth-child(5n+0) {background-image:url("../images/pic/5.gif");    }
+
+.hyfa li a {  
+      overflow:hidden;
+        height: 2.3rem;
+        vertical-align: middle;
+        -webkit-line-clamp: 2;
+        padding:0 0.3rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-box-pack: center;
+       -moz-box-pack: center;
+       -ms-flex-align:center;/* IE 10 */
+       margin-top:1.35rem;
+        color:#fff;
+}
+
+.content_eye * { line-height:1.2rem;}
+
+
+#one { position:absolute; height:auto;z-index:99999;}
+

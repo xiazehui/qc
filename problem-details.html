@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,14 +7,14 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <link rel="stylesheet" href="common/sm.css">
+    <link rel="stylesheet" href="common/sm-extend.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/window.js"></script>
 </head>
 <body>
 <div class="page-group">
-    <div class="page">
+    <div class="page" id="page-problem-details">
         <header class="bar bar-nav header">
             <a class="button button-link button-nav pull-left back" href="problem.html" data-transition='slide-out'>
                 <span class="icon icon-left"></span>
@@ -24,15 +24,16 @@
         <div class="content">
             <!-- 这里是页面内容区 -->
             <div class="common">
-		  		<textarea id="question" class="question" readonly>请详细填写您的问题，我们将尽快给您回复</textarea>
+		  		<div id="question" class="question"><img src="../images/pic/w.png" alt="Alternate Text" /><p></p></div>
 		  		<div style="height: 1rem;"></div>
-		  		<textarea id="answer" class="question" readonly>请详细填写您的问题，我们将尽快给您回复</textarea>
+		  		<div id="answer" class="question" style="display:none" ><img src="../images/pic/d.png" alt="Alternate Text" /><p></p></div>
 		  	</div>            
         </div>
     </div>
 </div>
-
-<script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='common/sm-extend.min.js' charset='utf-8'></script>
+    <script src="js/PageJS.js"></script>
 </body>
 </html>

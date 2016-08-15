@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <link rel="stylesheet" href="common/sm.css">
     <link rel="stylesheet" href="common/sm-extend.css">
     <link rel="stylesheet" href="css/main.css">
@@ -15,7 +14,7 @@
 </head>
 <body>
 <div class="page-group">
-    <div class="page">
+    <div class="page" id="page-index">
         <header class="bar bar-nav header">
             <h1 class="title">晴彩未来</h1>
         </header>
@@ -55,7 +54,8 @@
                             <a href="test.html" external>
                                 <img src="images/pic/index1.png" alt="高度近视风险测评" class="left">
                                 <div class="right">
-                                    高度近视风险测评
+                                    高度近视<br />
+                                    风险测评
                                 </div>
                             </a>
                         </li>
@@ -63,7 +63,7 @@
                             <a href="archives.html" external>
                                 <img src="images/pic/index2.png" alt="我的视光数据库" class="left">
                                 <div class="right">
-                                    我的视光数据库
+                                    我的视光<br />数据库
                                 </div>
                             </a>
                         </li>
@@ -71,14 +71,14 @@
                             <a href="prevent.html" external>
                                 <img src="images/pic/index3.png" alt="我的防控方案" class="left">
                                 <div class="right">
-                                    我的防控方案
+                                    我的防控<br />方案
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="eye.html" external>
+                            <a href="eye.html" >
                                 <img src="images/pic/index4.png" alt="护眼课堂" class="left">
-                                <div class="right last">
+                                <div class="right">
                                     护眼课堂
                                 </div>
                             </a>
@@ -94,7 +94,7 @@
                             <img src="images/pic/index5.jpg" alt="公益服务">
                             <p>公益服务</p>
                         </a>
-                        <a class="col-50 border" href="problem.html">
+                        <a class="col-50 border" href="problem.html" >
                             <img src="images/pic/index6.jpg" alt="专家解答">
                             <p>专家解答</p>
                         </a>
@@ -107,12 +107,7 @@
     <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='common/sm-extend.min.js' charset='utf-8'></script>
-    <script type="text/javascript">
-    $(function() {
-        $.init();
-        $(".swiper-container").swiper();
-    });    
-    </script>
+    <script src="js/PageJS.js"></script>
 </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,156 +7,270 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <link rel="stylesheet" href="common/sm.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/window.js"></script>
 </head>
 <body>
-<div class="page-group">
-    <div class="page page-current">
+    <div class="page-group">
         <header class="bar bar-nav header">
-        	<a class="button button-link button-nav pull-left back" href="index.html" data-transition='slide-out'>
-		      <span class="icon icon-left"></span>
-		      时光&屈光度档案
-		    </a>
+            <a class="button button-link button-nav pull-left back" href="index.html" data-transition='slide-out'>
+                <span class="icon icon-left"></span>
+                时光&屈光度档案
+            </a>
         </header>
         <div class="content">
             <!-- 这里是页面内容区 -->
             <section class="section">
-            	<div class="buttons-tab">
-				    <a href="#tab1" class="tab-link active button">裸眼视力</a>
-				    <a href="#tab2" class="tab-link button">屈光度</a>
-				</div>
-				<div class="tabs">
-			      	<div id="tab1" class="tab active">
-				        <div class="common">
-                            <div class="shili">
-                                <img src="images/pic/t5.png" alt="测试" class="content-img img-6">  
-                                <p class="center-zt">还没有视力数据，你可以选择</p>                                
+                <div class="buttons-tab">
+                    <a href="#tab1" class="tab-link active button">裸眼视力</a>
+                    <a href="#tab2" class="tab-link button">屈光度</a>
+                </div>
+                <div class="tabs">
+                    <div id="tab1" class="tab active">
+                        <div class="content-block">
+                            <div class="tab1_none_container" style="display:none">
+                                <img src="images/pic/t5.png" alt="测试" class="content-img img-6">
+                                <p class="center-zt">还没有视力数据，你可以选择</p>
+                                <a href="/test.html" external class="btn green">测视力</a>
                             </div>
-				          	<div id="container" style="width: 100%;height: 15rem;"></div>
-				          	<a href="javascript:;" class="btn green">测视力</a>      
-				        </div>
-			      	</div>
-			      	<div id="tab2" class="tab">
-				        <div class="common">
-				        	<img src="images/pic/t6.png" alt="测试" class="content-img img-6">  
-				          	<p class="indent-zt">还没有屈光度数据，我们会有专门的人员去您所在的学校采集屈光度数据，敬请期待</p>
-				        </div>
-			      	</div>						
-				</div>
-            </section>    
+                            <div class="tab1_data_container">
+                                <div id="container1" style="width: 100%;"></div>
+                                <a href="/test.html" external class="btn green">测视力</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab ">
+                        <div class="content-block">
+                            <div class="tab2_none_container" style="display:none">
+                                <img src="images/pic/t6.png" alt="测试" class="content-img img-6">
+                                <p class="indent-zt">还没有屈光度数据，我们会有专门的人员去您所在的学校采集屈光度数据，敬请期待</p>
+                            </div>
+                            <div class="tab2_data_container">
+                                <div id="container2" style="width:100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-</div>
-<script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
-<script type="text/javascript" src="common/echarts.min.js"></script>
-<script type="text/javascript">
-var dom = document.getElementById("container");
-var myChart = echarts.init(dom);
-var app = {};
-option = null;
-option = {
-    title: {
-        text: '视力变化曲线图',
-    },
-    legend: {
-        data:['左眼','右眼'],
-        right: "10%"
-    },
-    xAxis:  {
-        type: 'category',
-        boundaryGap: false,
-        data: ['周一','周二','周三','周四','周五','周六','周日']
-    },
-    yAxis: {
-        type: 'value',
-        axisLabel: {
-            formatter: '{value} '
-        },
-        splitNumber: 12,
-        min: 4,
-        max: 5
-    },
-    series: [
-        {
-            name:'左眼',
-            type:'line',
-            data:[4.1, 4.2, 4.7, 4.4, 4.5, 4.6, 4.5],
-            markPoint: {
-                data: [
-                    {type: 'max', name: '最大值'},
-                    {type: 'min', name: '最小值'}
-                ]
-            },
-        },
-        {
-           	name:'右眼',
-            type:'line',
-            data:[4.0, 4.1, 4.6, 4.3, 4.4, 4.5, 4.4],
-            markPoint: {
-                data: [
-                    {name: '周最低', value: +1, xAxis: 1, yAxis: -1.5}
-                ]
-            },
-        }
-    ]
-};
 
-if (option && typeof option === "object") {
-    myChart.setOption(option, true);
-}	
-</script>
-<script type="text/javascript">
-
-//    这三个是全局的变量稍后要扩展  写在公共区域，全部页面可以使用， 以后要修改这三个参数
-    var url = "http://nick.vicp.io/";
-    var userID = 2;
-    var studentId = 1;
-
-    $(function () {
-        //文档加载完成
-
-        //这里弹出加载数据等待框
+    <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='common/sm-extend.min.js' charset='utf-8'></script>
+    <!--<script src="common/echarts.min.js"></script>-->
+    <script src="common/jquery-1.8.3.min.js"></script>
+    <script src="common/highcharts.js"></script>
+    <script type="text/javascript">
+        $(function () {
 
 
-        //  这里请求获取屈光度列表
-        $.ajax({
-            type: "POST", // 要求是Post      Method：   POST
-            url: url + "vision/getDiopterList", //这里请求获取屈光度列表 要求是Post
-            data: { tudentId: studentId }, //这里是提交的参数 如果有其他参数自己获取 studentId int 是   用户标识
-            dataType: "json", //这里不用管 这是返回的格式， json 就好
-            success: function (data) {
-                ///这里是成功返回的
-                //{"data":[{"leftDiopter":120,"rightDiopter":150,"studentId":208,"submitTime":1469502438488,"diopterId":1},{"leftDiopter":150,"rightDiopter":180,"studentId":208,"submitTime":1469502600392,"diopterId":2}],"state":"获取成功","code":1}
-                //上面返回的是数据
-                if (data.code == 1) {
-                    //代表正常返回数据
-                    //这里隐藏加载登录框
-                    if (data.length > 0) {
+            lysl();
 
-                        //隐藏没有数据 显示图表容器
-                        //js 创建图表
 
-                    } else {
 
-                        //隐藏图表容器
-                        //显示没有数据容器
-                    }
+            qgd();
 
-                } else {
-                    console.log(data.state); //这里可以看到为啥不正确
-                }
-            },
-            error: function () {
-                alert("系统异常稍后再试...")
-            }
         });
 
-    })
 
-</script>
+
+        function lysl() {
+            var width = $(".content-block").width();
+            //  这里请求获取屈光度列表
+            $.ajax({
+                type: "POST", // 要求是Post      Method：   POST
+                url: getAjaxUrl() + "vision/getVisionList", //这里请求获取屈光度列表 要求是Post
+                data: { studentId: getStudentId() }, //这里是提交的参数 如果有其他参数自己获取 studentId int 是   用户标识
+                dataType: "json", //这里不用管 这是返回的格式， json 就好
+                success: function (data) {
+                    if (data.code == 1) {
+                        if (data.data.length > 0) {
+                            //隐藏没有数据 显示图表容器
+                            $(".tab1_data_container").css("display", "block");
+                            //js 创建图表
+
+                            var json = new Array();
+                            var dataY = new Array();
+                            var dataL = new Array();
+                            $.each(data.data, function (index, vale) {
+
+                                dataY.push({ x: vale.submitTime, y: parseFloat(vale.rightVision) })
+                                dataL.push({ x: vale.submitTime, y: parseFloat(vale.leftVision) })
+
+                            })
+
+                            json.push({ name: '右眼', data: dataY });
+                            json.push({ name: '左眼', data: dataL });
+
+                            //#region 创建图表================================
+
+                            jQuery('#container1').highcharts({
+                                chart: {
+                                    backgroundColor: "#4EE7CB",
+                                    height: "250",
+                                    width: width
+                                },
+                                colors: ['#2b908f', '#FBB679'],
+                                title: {
+                                    text: "视力变化曲线图",
+                                    style: { color: "#fff" }
+                                },
+                                xAxis: {
+                                    type: 'datetime',
+                                    labels: {
+                                        formatter: function () {
+                                            return Highcharts.dateFormat('%Y-%m-%d', this.value);
+                                        },
+                                        style: { color: "#ffffff" }
+                                    },
+                                    lineColor: '#ffffff',
+                                    endOnTick: true,
+                                    startOnTick: true
+                                },
+                                yAxis: {
+                                    type: 'linear',
+                                    title: {
+                                        text: ""
+                                    },
+                                    gridLineColor: '#ffffff',
+                                    labels: {
+                                        formatter: function () {
+                                            return parseFloat(this.value).toFixed(1);
+                                        },
+                                        style: { color: "#ffffff" }
+                                    },
+                                    lineColor: '#ffffff'
+                                },
+                                tooltip: {
+                                    crosshairs: true,
+                                    shared: true
+                                },
+                                legend: {
+                                    align: 'center',
+                                    borderWidth: 0,
+                                    verticalAlign: "bottom"
+                                },
+                                series: json
+                            });
+
+                            //#endregion
+
+                        } else {
+                            $(".tab1_none_container").css("display", "block");
+                        }
+                    } else {
+                        $.alert(data.state);
+                        return;
+                    }
+                },
+                error: function () {
+                    $.alert("系统异常稍后再试...")
+                }
+            });
+        }
+
+
+        function qgd() {
+            var width = $(".content-block").width();
+            $.ajax({
+                type: "POST", // 要求是Post      Method：   POST
+                url: getAjaxUrl() + "vision/getDiopterList",
+                data: { studentId: getStudentId() }, //这里是提交的参数 如果有其他参数自己获取 studentId int 是   用户标识
+                dataType: "json", //这里不用管 这是返回的格式， json 就好
+                success: function (data) {
+                    if (data.code == 1) {
+                        if (data.data.length > 0) {
+                            //隐藏没有数据 显示图表容器
+                            $(".tab2_data_container").css("display", "block");
+                            //js 创建图表
+
+                            var json = new Array();
+                            var dataY = new Array();
+                            var dataL = new Array();
+                            $.each(data.data, function (index, vale) {
+
+                                dataY.push({ x: vale.submitTime, y: parseFloat(vale.rightDiopter) })
+                                dataL.push({ x: vale.submitTime, y: parseFloat(vale.leftDiopter) })
+
+                            })
+
+                            json.push({ name: '右眼', data: dataY });
+                            json.push({ name: '左眼', data: dataL });
+
+                            //#region 创建图表================================
+                            jQuery('#container2').highcharts({
+                                chart: {
+                                    backgroundColor: "#4EE7CB",
+                                    height: "250",
+                                    width: width
+                                },
+                                colors: ['#2b908f', '#FBB679'],
+                                title: {
+                                    text: "视力变化曲线图",
+                                    style: { color: "#fff" }
+                                },
+                                xAxis: {
+                                    type: 'datetime',
+                                    labels: {
+                                        formatter: function () {
+                                            return Highcharts.dateFormat('%Y-%m-%d', this.value);
+                                        },
+                                        style: { color: "#ffffff" }
+                                    },
+                                    lineColor: '#ffffff',
+                                    endOnTick: true,
+                                    startOnTick: true
+                                },
+                                yAxis: {
+                                    type: 'linear',
+                                    title: {
+                                        text: ""
+                                    },
+                                    gridLineColor: '#ffffff',
+                                    labels: {
+                                        formatter: function () {
+                                            return this.value;
+                                        },
+                                        style: { color: "#ffffff" }
+                                    },
+                                    
+                                    lineColor: '#ffffff'
+                                  
+                                },
+                                tooltip: {
+                                    crosshairs: true,
+                                    shared: true,
+                                    formatter: function () {
+                                        return this.points[0].series.name + "：" + this.points[0].y +
+                                            "</br>" +
+                                            this.points[1].series.name + "：" + this.points[1].y;
+                                    }
+                                },
+                                legend: {
+                                    align: 'center',
+                                    borderWidth: 0,
+                                    verticalAlign: "bottom"
+                                },
+                                series: json
+                            });
+                            //#endregion
+
+                        } else {
+                            $(".tab2_none_container").css("display", "block");
+                        }
+                    } else {
+                        $.alert(data.state);
+                        return;
+                    }
+                },
+                error: function () {
+                    alert("系统异常稍后再试...")
+                }
+            });
+        }
+    </script>
 </body>
-</html>
+</html>-->

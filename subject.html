@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,21 +7,20 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <link rel="stylesheet" href="common/sm.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/window.js"></script>
-    <script type="text/javascript" src="common/angular.js"></script>
 </head>
 <body>
 <div class="page-group" ng-app="app">
+
     <div class="page page-current" id="subject1" ng-controller="subject1">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left" href="javascript:;" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第1题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next1()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(1)" >
 				下一题
 		    </a>
         </header>
@@ -30,14 +29,14 @@
             <div style="height: 2rem;"></div>
             <p class="center-zt">当前测试孩子的性别是？</p>
 		    <div class="row no-gutter">
-		    	<div class="col-100 tool big">
-			      	<a href="javascript:;" ng-click="sex='男孩'">
+		    	<div class="col-100 tool big" value="男">
+			      	<a href="javascript:;" >
 			      		<img src="images/pic/sex1.png" alt="男孩">
 			      		<span>男孩</span>
 			      	</a>			    		
 		    	</div>
-		    	<div class="col-100 tool big">
-			      	<a href="javascript:;" ng-click="sex='女孩'">
+		    	<div class="col-100 tool big" value="女">
+			      	<a href="javascript:;" >
 			      		<img src="images/pic/sex2.png" alt="女孩">
 			      		<span>女孩</span>
 			      	</a>			    		
@@ -45,13 +44,14 @@
 		    </div>           
         </div>
     </div>
+
     <div class="page" id="subject2" ng-controller="subject2">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject1" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第2题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next2()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(2)">
 				下一题
 		    </a>
         </header>
@@ -65,7 +65,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">生日</div>
 	            				<div class="item-input">
-					              	<input type="date" data-toggle='date' id="birthday" name="birthday" ng-model="birthday" ng-change="change()" required/>
+					              	<input type="text" data-toggle='date' id="birthday" name="birthday" placeholder="出生日期"  style="text-align:right" required/>
 					            </div>
 	            			</div>
 	            		</li>
@@ -73,7 +73,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">身高</div>
 	            				<div class="item-input">
-					              	<input type="number" placeholder="厘米" name="height" ng-model="height" required>
+					              	<input type="number" placeholder="厘米" id="height" name="height"  required>
 					            </div>
 	            			</div>
 	            		</li>
@@ -81,28 +81,29 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">体重</div>
 	            				<div class="item-input">
-					              	<input type="number" placeholder="斤" name="weight" ng-model="weight" required>
+					              	<input type="number" placeholder="斤" id="weight" name="weight"  required>
 					            </div>
 	            			</div>
 	            		</li>
 	            	</ul>
 	            </div> 	         	 
             </div>  
-            <div class="becareful ng-hide" id="b-18">
+            <div class="becareful hide" id="b-18">
             	满18周岁眼球基本成型，不需要进行测试哦
             </div>
-            <div class="becareful ng-hide" id="b-3">
+            <div class="becareful hide" id="b-3">
             	满3周岁才能预测到高度近视风险哦
             </div>                	
         </div>
     </div>
+
     <div class="page" id="subject3" ng-controller="subject3">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject2" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第3题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next3()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(3)">
 				下一题
 		    </a>
         </header>
@@ -115,7 +116,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">父亲度数</div>
 	            				<div class="item-input">
-					              	<input type="text" placeholder="度" name="father" ng-model="father">
+					              	<input type="text" placeholder="度" name="father" id="father" >
 					            </div>
 	            			</div>
 	            		</li>
@@ -123,7 +124,7 @@
 	            			<div class="item-inner">
 	            				<div class="item-title label">母亲度数</div>
 	            				<div class="item-input">
-					              	<input type="text" placeholder="度" name="mother" ng-model="mother">
+					              	<input type="text" placeholder="度" name="mother"  id="mother" >
 					            </div>
 	            			</div>
 	            		</li>
@@ -132,13 +133,14 @@
             </div>      
         </div>
     </div>
+
     <div class="page" id="subject4" ng-controller="subject4">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject3" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第4题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next4()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(4)">
 				下一题
 		    </a>
         </header>
@@ -149,17 +151,20 @@
 	            	<span class="green-zt">#视疲劳测试#</span>轻轻闭上双眼，观察孩子眼睫毛的抖动情况。
 	            	<img src="images/pic/s1.png" alt="视疲劳测试">
 	            </div>
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>            	 
+	            <a href="javascript:;" class="btn default"  score="3">不抖动</a>            	 
+                <a href="javascript:;" class="btn default" score="4">轻微抖动</a>
+                <a href="javascript:;" class="btn default" score="5">快速抖动</a>
             </div>      
         </div>
     </div>  
+
     <div class="page" id="subject5" ng-controller="subject5">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject4" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第5题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next5()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(5)">
 				下一题
 		    </a>
         </header>
@@ -170,17 +175,21 @@
 	            	<span class="green-zt">#眼压测试#</span>眼球自然向下看，用食指在孩子上眼脸位置按压眼球，触感如何？
 	            	<img src="images/pic/s2.png" alt="眼压测试">
 	            </div>
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>            	 
+                <a href="javascript:;" class="btn default" score="24">介于嘴唇与鼻尖</a>
+                <a href="javascript:;" class="btn default" score="3">介于笔尖与额头</a>
+                <a href="javascript:;" class="btn default" score="4">介于额头与石头</a>
+                <a href="javascript:;" class="btn default" score="5">如石头</a>
             </div>      
         </div>
     </div>  
+
     <div class="page" id="subject6" ng-controller="subject6">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject5" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第6题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next6()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(6)">
 				下一题
 		    </a>
         </header>
@@ -191,17 +200,20 @@
 	            	标准的读写姿势是做到“一尺一拳一寸”，即眼睛与书本距离一尺，身前与书桌距离一拳，握笔手指与笔尖距离一寸。您孩子的日常的读写姿势能否坚持做到“一尺一拳一寸”？
 	            	<img src="images/pic/s3.png" alt="一尺一拳一寸">
 	            </div>
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>	 
+                <a href="javascript:;" class="btn default" score="6">能继续保持</a>
+                <a href="javascript:;" class="btn default" score="8">偶尔保持</a>
+                <a href="javascript:;" class="btn default" score="10">基本做不到</a>
             </div>      
         </div>
     </div>
+
     <div class="page" id="subject7" ng-controller="subject7">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject6" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第7题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next7()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(7)">
 				下一题
 		    </a>
         </header>
@@ -212,22 +224,22 @@
 	            	孩子的握笔方式最接近与下图所示的哪一种？
 	            </div>  
 			    <div class="row no-gutter">
-			    	<div class="col-50 tool big" score="3">
+			    	<div class="col-50 tool big tool-select" score="3">
 				      	<a href="javascript:;">
 				      		<img src="images/pic/tool11.png" alt="">
 				      	</a>			    		
 			    	</div>
-			    	<div class="col-50 tool big" score="10">
+			    	<div class="col-50 tool big tool-select" score="10">
 				      	<a href="javascript:;">
 				      		<img src="images/pic/tool12.png" alt="">
 				      	</a>			    		
 			    	</div>
-			    	<div class="col-50 tool big" score="10">
+			    	<div class="col-50 tool big tool-select" score="10">
 				      	<a href="javascript:;">
 				      		<img src="images/pic/tool13.png" alt="">
 				      	</a>			    		
 			    	</div>
-			    	<div class="col-50 tool big" score="10">
+			    	<div class="col-50 tool big tool-select" score="10">
 				      	<a href="javascript:;">
 				      		<img src="images/pic/tool14.png" alt="">
 				      	</a>			    		
@@ -236,13 +248,14 @@
             </div>      
         </div>
     </div>  
+
     <div class="page" id="subject8" ng-controller="subject8">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject7" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第8题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next8()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(8)">
 				下一题
 		    </a>
         </header>
@@ -252,17 +265,25 @@
         		<div class="guide">	            	
 	            	孩子在行驶的车厢内，大部分时间会？
 	            </div>
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>                   	 
+                <a href="javascript:;" class="btn default" score="3">看窗外风景</a>
+            
+                <a href="javascript:;" class="btn default" score="10">看书</a>
+
+                <a href="javascript:;" class="btn default" score="10">玩手机</a>
+
+                <a href="javascript:;" class="btn default" score="4">睡觉</a>
+
             </div>      
         </div>
     </div>  
+
     <div class="page" id="subject9" ng-controller="subject9">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject8" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第9题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next9()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(9)">
 				下一题
 		    </a>
         </header>
@@ -272,18 +293,22 @@
         		<div class="guide">
 	            	孩子在看书（手机等）是存在一下哪种情况？<span class="red-zt">（可多选）</span>
 	            </div>    
-	            <a href="javascript:;" class="btn more" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a> 
-	            <a href="javascript:;" class="btn single" score="1">以上都没有</a>                   	 
+                <a href="javascript:;" class="btn more" score="2.5">趴着看</a>
+                <a href="javascript:;" class="btn more" score="2.5">灯光黑暗或闪烁情况下看</a>
+                <a href="javascript:;" class="btn more" score="2.5">太阳光下看</a>
+                <a href="javascript:;" class="btn more" score="2.5">边吃饭边看</a>
+                <a href="javascript:;" class="btn single" score="1">以上都没有</a>                   	 
             </div>      
         </div>
     </div>  
+
     <div class="page" id="subject10" ng-controller="subject10">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject9" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第10题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next10()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(10)">
 				下一题
 		    </a>
         </header>
@@ -293,17 +318,22 @@
         		<div class="guide">
 	            	孩子的每天户外运动平均多少？
 	            </div>    
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>
+	            <a href="javascript:;" class="btn default"  score="10">30分钟以内</a>
+                <a href="javascript:;" class="btn default" score="8">30~60分钟</a>
+                <a href="javascript:;" class="btn default" score="6">60~90分钟</a>
+                <a href="javascript:;" class="btn default" score="4">90分钟以上</a>
             </div>      
         </div>
     </div> 
+
+
     <div class="page" id="subject11" ng-controller="subject11">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject10" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第11题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next11()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(11)">
 				下一题
 		    </a>
         </header>
@@ -313,17 +343,20 @@
         		<div class="guide">
 	            	孩子是否破腹产？
 	            </div>      
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>
+	            <a href="javascript:;" class="btn default"  score="5">是</a>
+                <a href="javascript:;" class="btn default"  score="2">否</a>
             </div>      
         </div>
     </div>  
+
+
     <div class="page" id="subject12" ng-controller="subject12">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject11" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第12题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next12()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(12)">
 				下一题
 		    </a>
         </header>
@@ -334,17 +367,23 @@
 	            	孩子每次玩电脑、玩手机的时间一般多少？
                     <img src="images/pic/s4.png" alt="">
 	            </div>      
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>
+	           
+                <a href="javascript:;" class="btn default" score="3">少于半小时</a>
+                <a href="javascript:;" class="btn default" score="5">半小时到一小时</a>
+                <a href="javascript:;" class="btn default" score="7">一小时到两小时</a>
+                <a href="javascript:;" class="btn default" score="10">两小时以上</a>
+                
             </div>      
         </div>
     </div>
+
     <div class="page" id="subject13" ng-controller="subject13">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject12" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第13题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next13()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(13)">
 				下一题
 		    </a>
         </header>
@@ -354,17 +393,24 @@
         		<div class="guide">
 	            	天气晴好的周末，您的孩子经常去：
 	            </div>     
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>
+            
+                <a href="javascript:;" class="btn default" score="5">书店、图书馆</a>
+                <a href="javascript:;" class="btn default" score="2">和小伙伴去户外玩耍</a>
+                <a href="javascript:;" class="btn default" score="5">兴趣班</a>
+                <a href="javascript:;" class="btn default" score="5">宅在家里</a>
+            
+
             </div>      
         </div>
     </div>
+
     <div class="page" id="subject14" ng-controller="subject14">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject13" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第14题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next14()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(14)">
 				下一题
 		    </a>
         </header>
@@ -374,18 +420,23 @@
         		<div class="guide">
 	            	孩子看东西是否存在着一下行为？<span class="red-zt">（可多选）</span>
 	            </div>    
-                <a href="javascript:;" class="btn more" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>  
-                <a href="javascript:;" class="btn single" score="0">以上都没有</a>                        	 
+                <a href="javascript:;" class="btn more"  score="1">眯眼</a>  
+                <a href="javascript:;" class="btn more" score="1">歪头</a>
+                <a href="javascript:;" class="btn more" score="1">侧视</a>
+                <a href="javascript:;" class="btn more" score="1">皱眉</a>
+                <a href="javascript:;" class="btn more" score="1">频眨眼、猛眨眼</a>
+                 <a href="javascript:;" class="btn single" score="0">以上都没有</a>                        	 
             </div>      
         </div>
     </div>
+
     <div class="page" id="subject15" ng-controller="subject15">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject14" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第15题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next15()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(15)">
 				下一题
 		    </a>
         </header>
@@ -395,17 +446,19 @@
                 <div class="guide">
                     孩子是否有晨读习惯？
                 </div>    
-                <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>
+                <a href="javascript:;" class="btn default"  score="5">是</a>
+                <a href="javascript:;" class="btn default" score="2">否</a>
             </div>      
         </div>
     </div> 
+
     <div class="page" id="subject16" ng-controller="subject16">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject15" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第16题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next16()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(16)">
 				下一题
 		    </a>
         </header>
@@ -416,17 +469,23 @@
 	            	孩子平时是否喜欢揉眼睛？
                     <img src="images/pic/s5.png" alt="">
 	            </div>    
-	            <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>
+	         
+                <a href="javascript:;" class="btn default" score="1">没有见过</a>
+                
+                <a href="javascript:;" class="btn default" score="3">偶尔有</a>
+
+                <a href="javascript:;" class="btn default" score="5">经常</a>
             </div>      
         </div>
     </div>   
+
     <div class="page" id="subject17" ng-controller="subject17">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject16" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
 				第17题
 		    </a>
-		    <a class="button button-link button-nav pull-right" data-transition='slide-out' ng-click="next17()">
+		    <a class="button button-link button-nav pull-right" data-transition='slide-out' onclick="thisPage(17)">
 				完成
 		    </a>
         </header>
@@ -436,11 +495,14 @@
         		<div class="guide">
                     在没有人提现的状态下，看书、写作业连续时间是否经常超过45分钟？
                 </div>    
-                <a href="javascript:;" class="btn default" ng-repeat="x in infos" score="{{x.score}}">{{x.con}}</a>
+               
+                <a href="javascript:;" class="btn default" score="2">是</a>
+                <a href="javascript:;" class="btn default" score="5">否</a>
             </div>      
         </div>
     </div> 
-    <div class="page" id="subject18">
+
+    <div class="page" id="subject18" ng-controller="subject18">
         <header class="bar bar-nav header">
         	<a class="button button-link button-nav pull-left back" href="#subject16" data-transition='slide-out'>
 		      	<span class="icon icon-left"></span>
@@ -468,14 +530,14 @@
                 </div>
             </section>  
             <div class="section bottom-pos">
-	            <a href="index.html" class="btn green">确定</a>                   
+	            <a href="index.html"  external class="btn green">确定</a>                   
 	        </div>   
         </div>
-    </div>                       
+    </div>   
+                        
 </div>
 <script type='text/javascript' src='common/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='common/sm.min.js' charset='utf-8'></script>
-<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/subject.js"></script>
 </body>
 </html>
